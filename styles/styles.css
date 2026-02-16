@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+
+}
+
+header {
+    background-color: rgb(225, 225, 0);
+}
+
+.inputs {
+    display: none;
+    margin-top: 20px;
+  }
+  
+  #bsn-radio:checked ~ .inputs,
+  #becon-radio:checked ~ .inputs,
+  #protocol-radio:checked ~ .inputs {
+    display: block;
+  }
+  
+
+
+
