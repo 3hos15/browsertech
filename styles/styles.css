@@ -1,23 +1,148 @@
 * {
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
 
+:root {
+    --white-bg: #ffffff;
+    --grey-bg: #d9d9df;
+    --ns-yellow: #ffc917;
+    --ns-yellow-hover: #e7b81d;
+    --ns-blue-text: #003082;
+    --ns-blue-link:#0063d3;
+    --ns-green-progress: #00a888;
+    --ns-darkpurple-infotext: #503fa7;
+    --ns-lightpurple-info: #f5f3fe;
+    --ns-lightpurple-infoborder:#dcd6fb;
+}
+
+body {
+    background-color: var(--white-bg);
+    color: var(--ns-blue-text);
+}
+
+header, footer {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        font-size: 2em;
+        padding: 0;
+        margin: .5em 0 0 0;
+    }
+
+    p {
+        font-size: 0.8em;
+        padding: 0;
+        margin: 1em 0 .2em 0;
+    }
 }
 
 header {
-    background-color: rgb(225, 225, 0);
+    box-shadow: 0px 3px 3px rgb(230, 230, 230);;
 }
 
-.inputs {
+
+footer {
+    padding: 1em;
+    background-color: var(--ns-yellow);
+
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 1em;
+}
+
+legend {
+padding: 0;
+}
+
+
+fieldset > fieldset{
+    display: grid;
+    gap: 0.75rem;
+}
+
+
+form {
+    margin-bottom: 1em;
+}
+
+
+.step {
+    display: none;
+}
+
+.step.active {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-nav {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+
+#g-overledene {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+
+
+#prevbutton, #nextbutton, #submitbutton {
+    padding: 1em 1em;
+    background-color: var(--ns-yellow);
+    color: var(--ns-blue-text);
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+
+    &:hover {
+        background-color: var(--ns-yellow-hover);
+        transition: 500ms;
+    }
+}
+
+#submitbutton {
+    display: none;
+    background-color: var(--ns-blue-link);
+    color: var(--white-bg);
+
+    &:hover {
+        background-color: var(--ns-blue-text);
+        transition: 500ms;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* .inputs {
     display: none;
     margin-top: 20px;
-  }
-  
-  #bsn-radio:checked ~ .inputs,
-  #becon-radio:checked ~ .inputs,
-  #protocol-radio:checked ~ .inputs {
-    display: block;
-  }
-  
+}
+
+#bsn-radio:checked ~ .inputs,
+#becon-radio:checked ~ .inputs,
+#protocol-radio:checked ~ .inputs {
+display: block;
+}
+ */
+
 
 
 

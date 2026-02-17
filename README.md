@@ -29,9 +29,27 @@ Veel over formulieren
 * Nieuwe info input types
 
 **Wat ga ik morgen doen:**
-Verder aan formulier, onderzoeken ns vormgeving en beginnen aan vormgeven,
+Verder aan formulier, onderzoeken ns vormgeving en beginnen aan vormgeven
 
+---
 
+### Dag 9 - dinsdag 17 feb
+
+**Wat heb ik vandaag gedaan:**
+weekly geek
+workshop van victor
+
+styling en javascript 
+
+**Hoelang duurde het:**
+De heledag naast pauze (vandaag zat ik er wel een beetje doorheen)
+
+**Wat heb ik geleerd:**
+Read only in html en css
+
+**Wat ga ik morgen doen:**
+verder werken aan de styling, skip naar vraag 1b etc
+2e pattern er in en CSS kickoff
 
 
 ---

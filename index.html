@@ -6,23 +6,28 @@
     <title>Erfbelasting formulier</title>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
+
+
 <body>
     <header>
-        <h1>Erfbelasting formulier</h1>
-        <p>Dit is een studenten opdracht!</p>
+    <h1>Erfbelasting formulier</h1>
+    <p>Dit is een studenten opdracht!</p>
     </header>
 
     <main>
         <section>
             <form>
+                
                 <fieldset>
                     <legend>Gegevens van de overledene</legend>
-                    <fieldset>
-                        <legend>Gegevens van de overledene</legend>
+
+                    <fieldset id="gegevens-overledene" class="step"> 
+                    <legend>--?--</legend>
                         <label>
                             Voorletter(s)
                             <input type="text" name="voornaam">
                         </label>
+
                         <label>
                             Tussenvoegsel(s)
                             <input type="text" name="tussenvoegsel">
@@ -33,125 +38,136 @@
                         </label>
                         <label>
                             Bsn overledene
-                            <input type="number" name="bsn" minlength="9"
-                            maxlength="9">
+                            <input type="number" name="bsn" minlength="9" maxlength="9">
                         </label>
                         <label>
                             Overlijdensdatum
-                            <input type="date" name="overlijdensdatum"
-                            min="2025-02-16"
-                            max="2026-02-16">
+                            <input type="date" name="overlijdensdatum" min="2025-02-16" max="2026-02-16">
                         </label>
                     </fieldset>
-                                
-                    <fieldset>
+
+                    <fieldset id="overledene-getrouwd" class="step">
                         <legend>Was de overledene getrouwd of had de overledene een geregistreerde partner op het moment van overlijden?</legend>
-                        <div>
+
+                        <label>
+                            Nee
                             <input type="radio" id="getrouwdnee" name="getrouwd" value="nee">
-                            <label for="getrouwdnee">Nee</label>
-                        </div>
-                        <div>
+                        </label>
+
+                        <label>
+                            Ja
                             <input type="radio" id="getrouwdja" name="getrouwd" value="ja">
-                            <label for="getrouwdja">Ja</label>
-                        </div>
+                        </label>
                     </fieldset>
 
-                    <fieldset>
-                        <legend>Hadden de overledene en diens echtgenoot of
-                            geregistreerde partner huwelijkse of partnerschapsvoorwaarden laten vastleggen in een notariële akte?</legend>
-                        <div>
+                    <fieldset id="overledene-akte" class="step">
+                        <legend>
+                            Hadden de overledene en diens echtgenoot of geregistreerde partner huwelijkse of partnerschapsvoorwaarden
+                            laten vastleggen in een notariële akte?
+                        </legend>
+
+                        <label>
+                            Nee
                             <input type="radio" id="aktenee" name="akte" value="nee">
-                            <label for="aktenee">Nee</label>
-                        </div>
-                        <div>
+                        </label>
+
+                        <label>
+                            Ja
                             <input type="radio" id="akteja" name="akte" value="ja">
-                            <label for="akteja">Ja</label>
-                        </div>
+                        </label>
                     </fieldset>
 
-                    <fieldset>
+                    <fieldset id="overledene-verrekenbeding" class="step">
                         <legend>Hadden de overledene en diens partner een finaal verrekenbeding?</legend>
-                        <div>
+
+                        <label>
+                            Nee
                             <input type="radio" id="verrekenbedingnee" name="verrekenbeding" value="nee">
-                            <label for="verrekenbedingnee">Nee</label>
-                        </div>
-                        <div>
+                        </label>
+
+                        <label>
+                            Ja
                             <input type="radio" id="verrekenbedingja" name="verrekenbeding" value="ja">
-                            <label for="verrekenbedingja">Ja</label>
-                        </div>
+                        </label>
                     </fieldset>
-                    <fieldset>
+
+                    <fieldset id="partnerschapsvoorwaarden" class="step">
                         <legend>Datum huwelijkse of partnerschapsvoorwaarden</legend>
                         <label>
                             Dag
-                            <input type="number" name="dagpartnerschapsvoorwaarden" minlength="1"
-                            maxlength="2">
+                            <input type="number" name="dagpartnerschapsvoorwaarden" minlength="1" maxlength="2">
                         </label>
                         <label>
                             Maand
-                            <input type="number" name="maandpartnerschapsvoorwaarden" minlength="1"
-                            maxlength="2">
+                            <input type="number" name="maandpartnerschapsvoorwaarden" minlength="1" maxlength="2">
                         </label>
                         <label>
                             Jaar
-                            <input type="number" name="jaarpartnerschapsvoorwaarden"minlength="4"
-                            maxlength="4">
+                            <input type="number" name="jaarpartnerschapsvoorwaarden" minlength="4" maxlength="4">
                         </label>
                     </fieldset>
-                    <fieldset>
+
+                    <fieldset id="overledene-kinderen" class="step">
                         <legend>Had de overledene kinderen?</legend>
-                        <div>
+
+                        <label>
+                            Nee
                             <input type="radio" id="kinderennee" name="kinderen" value="nee">
-                            <label for="kinderennee">Nee</label>
-                        </div>
-                        <div>
+                        </label>
+
+                        <label>
+                            Ja
                             <input type="radio" id="kinderenja" name="kinderen" value="ja">
-                            <label for="kinderenja">Ja</label>
-                        </div>
+                        </label>
                     </fieldset>
 
-                    <fieldset>
+                    <fieldset id="kinderen-overleden" class="step">
                         <legend>Is 1 van deze kinderen eerder overleden dan de overledene voor wie u nu aangifte doet?</legend>
-                        <div>
+
+                        <label>
+                            Nee
                             <input type="radio" id="eerderoverledennee" name="eerderoverleden" value="nee">
-                            <label for="eerderoverledennee">Nee</label>
-                        </div>
-                        <div>
+                        </label>
+
+                        <label>
+                            Ja
                             <input type="radio" id="eerderoverledenja" name="eerderoverleden" value="ja">
-                            <label for="eerderoverledenja">Ja</label>
-                        </div>
+                        </label>
                     </fieldset>
 
-                    <fieldset>
+                    <fieldset id="kinderen-kind" class="step">
                         <legend>Had dit overleden kind zelf kinderen?</legend>
-                        <div>
+
+                        <label>
+                            Nee
                             <input type="radio" id="kindkindnee" name="kindkind" value="nee">
-                            <label for="kindkindnee">Nee</label>
-                        </div>
-                        <div>
+                        </label>
+
+                        <label>
+                            Ja
                             <input type="radio" id="kindkindja" name="kindkind" value="ja">
-                            <label for="kindkindja">Ja</label>
-                        </div>
+                        </label>
                     </fieldset>
 
-
-                    <fieldset>
+                    <fieldset id="overledene-testament" class="step">
                         <legend>Had de overledene een testament?</legend>
-                        <div>
+
+                        <label>
+                            Nee. Ga verder met vraag 2.
                             <input type="radio" id="testamentnee" name="testament" value="nee">
-                            <label for="testamentnee">Nee. Ga verder met vraag 2.</label>
-                        </div>
-                        <div>
+                        </label>
+
+                        <label>
+                            Ja
                             <input type="radio" id="testamentja" name="testament" value="ja">
-                            <label for="testamentja">Ja</label>
-                        </div>
+                        </label>
                     </fieldset>
-                    <fieldset>
+
+                    <fieldset id="gegevens-notaris" class="step">
                         <legend>Gegevens notaris</legend>
                         <label>
                             Protocolnummer
-                            <input type="number" name="Protocolnummer" minlength="6"
-                            maxlength="6">
+                            <input type="number" name="Protocolnummer" minlength="6" maxlength="6">
                         </label>
                         <label>
                             Voorletter(s)
@@ -170,77 +186,39 @@
                             <input type="text" name="vestiginsplaats">
                         </label>
                     </fieldset>
-                    <fieldset>
+
+                    <fieldset id="datum-testament" class="step">
                         <legend>Datum van het testament of van de laatste wijziging</legend>
                         <label>
                             Dag
-                            <input type="number" name="dagtestament" minlength="1"
-                            maxlength="2">
+                            <input type="number" name="dagtestament" minlength="1" maxlength="2">
                         </label>
                         <label>
                             Maand
-                            <input type="number" name="maandtestament" minlength="1"
-                            maxlength="2">
+                            <input type="number" name="maandtestament" minlength="1" maxlength="2">
                         </label>
                         <label>
                             Jaar
-                            <input type="number" name="jaartestament" minlength="4"
-                            maxlength="4">
+                            <input type="number" name="jaartestament" minlength="4" maxlength="4">
                         </label>
                     </fieldset>
+
+                    <nav class="form-nav">
+                        <button type="button" id="prevbutton"> < Vorige</button>
+                        <button type="button" id="nextbutton">Volgende ></button>
+                        <button type="submit" id="submitbutton">Versturen</button>
+                    </nav>
+
                 </fieldset>
-                <button type="submit">Verder</button>
-            </form>
-        </section>
-        <section>
-            <form>
-                <fieldset>
-                    <legend>Gegevens gemachtigde</legend>
-                    <fieldset>
-                        <legend>Kies 1 van de 3 om in te vullen: het bsn of RSIN van de gemachtigde, het beconnummer van de adviseur of het protocolnummer van de notaris.</legend>
-                    
-                        <label>
-                            <input type="radio" name="type" id="bsn-radio">
-                            BSN of RSIN gemachtigde
-                        </label>
-                    
-                        <label>
-                        <input type="radio" name="type" id="becon-radio">
-                        Beconnummer adviseur
-                        </label>
-                    
-                        <label>
-                        <input type="radio" name="type" id="protocol-radio">
-                        Protocolnummer notaris
-                        </label>
-                    </fieldset>
-                    
-                    
-                    <fieldset class="inputs">
-                        <legend>Nummer invoeren</legend>
-                    
-                        <div class="bsn-field">
-                            <label>BSN/RSIN gemachtigde</label>
-                            <input type="text">
-                        </div>
-                    
-                        <div class="becon-field">
-                            <label>Beconnummer adviseur</label>
-                            <input type="text">
-                        </div>
-                    
-                        <div class="protocol-field">
-                            <label>Protocolnummer notaris</label>
-                            <input type="text">
-                        </div>
-                    
-                        </fieldset>
-                </fieldset>
+
             </form>
         </section>
     </main>
 
     <footer>
+        <div>
+            <p>---</p>
+        </div>
     </footer>
 
     <script src="script/main.js"></script>
