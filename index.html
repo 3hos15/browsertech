@@ -22,7 +22,7 @@
                     <legend>Gegevens van de overledene</legend>
 
                     <fieldset id="gegevens-overledene" class="step"> 
-                    <legend>--?--</legend>
+                    <legend>Persoonsgegevens overledene</legend>
                         <label>
                             Voorletter(s)
                             <input type="text" name="voornaam">
@@ -38,7 +38,7 @@
                         </label>
                         <label>
                             Bsn overledene
-                            <input type="number" name="bsn" minlength="9" maxlength="9">
+                            <input pattern="[0-9]{9} regular expressions" type="text" name="bsn" minlength="9" maxlength="9">
                         </label>
                         <label>
                             Overlijdensdatum
