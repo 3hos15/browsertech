@@ -79,6 +79,7 @@ De Weekly Geek en de workshop van Victor waren een goede aanvulling op mijn eige
 Halverwege de week merkte ik dat mijn energie wat lager lag. Ondanks dat heb ik toch doorgewerkt, zij het in een iets lager tempo. Dit maakte me bewust van het belang van realistische planning en het nemen van korte pauzes om focus te behouden. Tegelijkertijd ben ik tevreden dat ik, ondanks deze dip, vooruitgang heb geboekt en de basis van het formulier steeds sterker werd.
 
 Wat ik deze week vooral heb geleerd, is dat vormgeving, techniek en gebruikerservaring sterk met elkaar verbonden zijn. Kleine aanpassingen in CSS of HTML kunnen een groot verschil maken in hoe logisch en prettig een formulier aanvoelt. Volgende week wil ik hier verder op voortbouwen door eerder te testen, feedback te verzamelen en mijn keuzes beter te onderbouwen. Daarnaast wil ik efficiënter omgaan met mijn tijd, zodat ik mijn energie beter kan verdelen over de week.
+
 ---
 
 ### week 4
