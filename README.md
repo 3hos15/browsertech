@@ -51,21 +51,6 @@ Read only in html en css
 verder werken aan de styling, skip naar vraag 1b etc
 2e pattern er in en CSS kickoff
 
-
----
-
-### Dag 3 - woensdag 18 feb
-
-**Wat heb ik vandaag gedaan:**
-
-
-
-**Hoelang duurde het:**
-
-**Wat heb ik geleerd:**
-
-**Wat ga ik morgen doen:**
-
 ---
 
 ### Reflectie Week 3
@@ -104,10 +89,10 @@ De weekly geek opdracht met het groepje maken. Workshop volgen en verder werken 
 **Wat heb ik vandaag gedaan:**
 * Weekly geek
 Voor de weekly geek heb ik met mijn groepje radio buttons en checkboxen onderzocht. We hebben gekeken naar hoe je ze zelf kan maken dmv divs en spans. Ik had gekeken naar de checkboxes, hiervoor moet je de volgende dingen in je HTML, CSS en Javascript zetten:
-
 <img src="readme-images/chkbhtml.png" width="200">
 <img src="readme-images/chkbcss.png" width="200">
 <img src="readme-images/chkbjava.png" width="200">
+
 De checkbox kan je bedienen door te tabben en op space te drukken, ook hebben we toegevoegd dat je ook er op kan klikken.
 Zo ziet het eruit:
 <img src="readme-images/chkb.png" width="200">
@@ -115,6 +100,39 @@ Zo ziet het eruit:
 
 
 De javascript code was nogal lastig om te begrijpen, zeker voor de radiobuttons want die kregen we niet te werken.
+
+* Workshop valideren in javascript van Victor aantekeningen:
+
+if(nameField.value == repeatNameField.value) {
+    console.log('komt overeen')  
+    }
+    else {
+        repeatNameField.setCustomValidity('Veld komt niet overeen met naam')
+        console.log('komt niet overeen')
+    }
+
+
+repeatNameField.addEventlistener('blur', event=> {
+    if(nameField.value == repeatNameField.value) {
+    console.log('komt overeen')  
+    }
+    else {
+        repeatNameField.setCustomValidity('Veld komt niet overeen met naam')
+        console.log('komt niet overeen')
+    }
+})
+
+console.log(false === '0') - altijd === gebruiken, dit is stricter.
+
+een p tag met error toevoegen en die stylen in css als de input invalid is, geeft niet veel voor accesability/screenreader - aria-live=polite etc.
+
+Custom validity resetten met ("") in de if statement (het wordt altijd geparsed naar een string ook als je het niet tussen haakjes zet)
+
+Als javascript uit staat moet je formulier nogsteeds kunnen werken
+
+MDN validity state
+
+
 
 **Hoelang duurde het:**
 **Wat heb ik geleerd:**
