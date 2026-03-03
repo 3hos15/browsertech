@@ -70,7 +70,15 @@ verder werken aan de styling, skip naar vraag 1b etc
 
 ### Reflectie Week 3
 
+Deze week stond grotendeels in het teken van het opzetten, uitwerken en begrijpen van formulieren binnen HTML, in combinatie met styling en de eerste stappen richting interactie met JavaScript. Aan het begin van de week lag mijn focus vooral op de technische basis: het correct structureren van een formulier en het toepassen van semantische HTML. Door het hoorcollege kreeg ik beter inzicht in waarom onderdelen zoals fieldset en legend belangrijk zijn, niet alleen voor overzicht in de code maar ook voor toegankelijkheid en gebruiksvriendelijkheid.
 
+Tijdens het bouwen van de eerste pagina van het formulier merkte ik dat ik steeds bewuster keuzes begon te maken. Waar ik eerder vooral keek naar of iets ‘werkt’, denk ik nu meer na over structuur, schaalbaarheid en hoe een gebruiker door het formulier heen navigeert. Dit was soms uitdagend, omdat het erfbelastingformulier inhoudelijk complex is, maar juist daardoor leerzaam.
+
+De Weekly Geek en de workshop van Victor waren een goede aanvulling op mijn eigen werk. Deze momenten zorgden ervoor dat ik mijn aanpak kon spiegelen aan voorbeelden en best practices. Vooral het onderwerp readonly inputs liet me nadenken over hoe je met kleine technische keuzes veel duidelijkheid kunt creëren voor de gebruiker. Ook werd het voor mij duidelijker hoe CSS niet alleen een esthetische functie heeft, maar ook kan bijdragen aan begrijpelijkheid en hiërarchie.
+
+Halverwege de week merkte ik dat mijn energie wat lager lag. Ondanks dat heb ik toch doorgewerkt, zij het in een iets lager tempo. Dit maakte me bewust van het belang van realistische planning en het nemen van korte pauzes om focus te behouden. Tegelijkertijd ben ik tevreden dat ik, ondanks deze dip, vooruitgang heb geboekt en de basis van het formulier steeds sterker werd.
+
+Wat ik deze week vooral heb geleerd, is dat vormgeving, techniek en gebruikerservaring sterk met elkaar verbonden zijn. Kleine aanpassingen in CSS of HTML kunnen een groot verschil maken in hoe logisch en prettig een formulier aanvoelt. Volgende week wil ik hier verder op voortbouwen door eerder te testen, feedback te verzamelen en mijn keuzes beter te onderbouwen. Daarnaast wil ik efficiënter omgaan met mijn tijd, zodat ik mijn energie beter kan verdelen over de week.
 ---
 
 ### week 4
@@ -89,3 +97,24 @@ Hoe ik met  alleen html en css een formulier kan valideren
 
 **Wat ga ik morgen doen:**
 De weekly geek opdracht met het groepje maken. Workshop volgen en verder werken aan BT. Extra informatie formulier toepassen (aside)?
+
+### Dag 5 - dinsdag 3 maart
+
+**Wat heb ik vandaag gedaan:**
+* Weekly geek
+Voor de weekly geek heb ik met mijn groepje radio buttons en checkboxen onderzocht. We hebben gekeken naar hoe je ze zelf kan maken dmv divs en spans. Ik had gekeken naar de checkboxes, hiervoor moet je de volgende dingen in je HTML, CSS en Javascript zetten:
+
+<img src="readme-images/chkbhtml.png" width="200">
+<img src="readme-images/chkbcss.png" width="200">
+<img src="readme-images/chkbjava.png" width="200">
+De checkbox kan je bedienen door te tabben en op space te drukken, ook hebben we toegevoegd dat je ook er op kan klikken.
+Zo ziet het eruit:
+<img src="readme-images/chkb.png" width="200">
+<img src="readme-images/chkbx.png" width="200">
+
+
+De javascript code was nogal lastig om te begrijpen, zeker voor de radiobuttons want die kregen we niet te werken.
+
+**Hoelang duurde het:**
+**Wat heb ik geleerd:**
+**Wat ga ik morgen doen:**
