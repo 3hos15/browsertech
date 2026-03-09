@@ -132,8 +132,9 @@ Als javascript uit staat moet je formulier nogsteeds kunnen werken
 
 MDN validity state
 
-
-
 **Hoelang duurde het:**
+De hele dag naast workshops en pauzes 
 **Wat heb ik geleerd:**
+Valideren met javascript
+
 **Wat ga ik morgen doen:**
