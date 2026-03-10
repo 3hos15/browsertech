@@ -6,7 +6,7 @@
 
 :root {
     --white-bg: #ffffff;
-    --grey-bg: #d9d9df;
+    --grey-bg: #f4f4f887;
     --ns-yellow: #ffc917;
     --ns-yellow-hover: #e7b81d;
     --ns-blue-text: #003082;
@@ -17,9 +17,14 @@
     --ns-lightpurple-infoborder:#dcd6fb;
 }
 
+
 body {
-    background-color: var(--white-bg);
+    background-color: var(--grey-bg);
     color: var(--ns-blue-text);
+}
+main {
+    display: flex;
+    justify-content: center;
 }
 
 header, footer {
@@ -43,7 +48,9 @@ header, footer {
 }
 
 header {
-    box-shadow: 0px 3px 3px rgb(230, 230, 230);;
+    box-shadow: 0px 3px 3px rgb(230, 230, 230);
+    background-color: var(--white-bg);
+
 }
 
 
@@ -53,36 +60,200 @@ footer {
 
 }
 
+form {
+    margin-bottom: 1em;
+    width: 100%;
+    max-width: 40em;
+}
+
+
 fieldset {
     border: none;
     padding: 0;
-    margin: 1em;
+    margin: .5em;
+    
 }
 
-legend {
+form > fieldset > legend {
 padding: 0;
+font-size: 1.3em;
+padding: 0.5em 0 1em 1em;
 }
 
 
 fieldset > fieldset{
     display: grid;
     gap: 0.75rem;
+    padding: 1em;
+    background-color: var(--white-bg);
+    border: none;
+    /* border: 1px solid var(--ns-lightpurple-infoborder); */
+    border-radius: 10px;
+    margin-bottom: 2em;
+
+    legend {
+        font-size: 1.1em;
+        font-weight: 00;
+    }
+    &:has(input[type="radio"]) {
+        display: flex;    
+    }
+}
+
+label {
+    font-weight: 600;
+}
+
+label:has(input[type="text"], input[type="number"], input[type="date"]) {
+    margin-bottom: .5em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+input[type="text"], input[type="number"], input[type="date"] {
+    appearance: none;
+    width: min(100%, 44em);
+    height: 3em;
+    background-color: var(--white-bg);
+    border: 1px solid rgb(160, 160, 160);
+    border-radius: 5px;
+    margin-top: .25em;
+
+        &:focus {
+            outline: none;
+            border-color: var(--ns-green-progress);
+            box-shadow: 0 0 0 2px var(--ns-green-progress);
+            transition: 200ms;
+        }
+}
+
+input[type="radio"] {
+    width: 1.2em;
+    height: 1.2em;
+    margin-right: .5em;
+    accent-color: var(--ns-green-progress);
+}
+
+label:has(input[type="radio"]) {
+    display: flex;
+    gap: .5em;
+    align-items: center;
+}
+
+/* Legend stays horizontal */
+#overledene-getrouwd legend {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* The question mark (summary) next to legend */
+#overledene-getrouwd details.help summary {
+    list-style: none;
+    font-size: 0.9rem;
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    background-color: #003082;
+    color: white;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--ns-green-progress);
+        transition: 500ms;
+    }
+
+    &:open {
+        background-color: var(--ns-green-progress);
+    }
+}
+
+/* Extra content below legend */
+#overledene-getrouwd details.help p {
+    margin-top: 0.5rem;
+}
+
+/* Remove default triangle */
+.help summary {
+    list-style: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: #003082;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.5rem;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0;
+}
+
+/* Paragraph under the question mark */
+.help p {
+    margin: 0.5rem 0 0 0;
+}
+
+.help:open summary {
+    background-color: #ffc917;
+    color: #003082;
 }
 
 
-form {
-    margin-bottom: 1em;
-}
-
-
+/* 
 .step {
     display: none;
+}
+
+.step:first-of-type {
+    display: block;
+}
+
+#overledene-getrouwd:has(input:checked) + #overledene-akte {
+    display: block;
+}
+
+#overledene-akte:has(input:checked) + #overledene-verrekenbeding {
+    display: block;
+}
+
+#overledene-verrekenbeding:has(input:checked) + #partnerschapsvoorwaarden {
+    display: block;
+}
+
+#partnerschapsvoorwaarden:has(input) + #overledene-kinderen {
+    display: block;
+}
+
+#overledene-kinderen:has(input:checked) + #kinderen-overleden {
+    display: block;
+}
+
+#kinderen-overleden:has(input:checked) + #kinderen-kind {
+    display: block;
+}
+
+#kinderen-kind:has(input:checked) + #overledene-testament {
+    display: block;
+}
+
+#overledene-testament:has(input:checked) + #gegevens-notaris {
+    display: block;
+}
+
+#gegevens-notaris:has(input) + #datum-testament {
+    display: block;
 }
 
 .step.active {
     display: flex;
     flex-direction: column;
-}
+} */
 
 .form-nav {
     display: flex;

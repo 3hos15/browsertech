@@ -138,3 +138,75 @@ De hele dag naast workshops en pauzes
 Valideren met javascript
 
 **Wat ga ik morgen doen:**
+
+---
+
+### week 5
+
+---
+
+### Dag 6 - maandag 9 maart
+
+* Workshop van Victor <br>
+https://codepen.io/3hos15/pen/PwGGGRM <br>
+<img src="readme-images/wrkshopnegenmaart.png" width="200"> <br>
+
+Herhaling user-invalid. Geleerd over aria-live="polite" en aria-describedby attributen in javascript
+
+https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby
+
+* Gesprek BT ingehaald
+progessive disclore meerdere html
+informatie vragen
+validatie toevoegen
+wat is echt handig?
+
+
+* Weekly geek 
+De video gebruikt de metafoor van “twee wolven in jezelf” om het conflict te beschrijven tussen webgebruikers en webdesigners.
+
+Adrian staat voor de gebruiker: die wil dat websites duidelijk, herkenbaar en makkelijk te gebruiken zijn.
+
+Chris staat voor de designer: die wil innoveren en dingen anders doen, vaak om origineel te lijken.
+
+Het probleem ontstaat wanneer designers bestaande interface-conventies veranderen terwijl die eigenlijk prima werken voor gebruikers. Daardoor wordt een interface moeilijker te begrijpen.
+
+Voorbeelden:
+
+Hyperlinks: designers verwijderen vaak de onderstreping, terwijl die juist helpt om links te herkennen.
+
+Text inputs (formuliervelden): designers halen lijnen en labels weg om het design minimalistisch te maken.
+
+Wanneer labels verdwijnen ontstaan nieuwe problemen:
+
+Het is onduidelijk waar je tekst moet invoeren.
+
+Designers plaatsen labels vervolgens als placeholder in het veld, wat verwarrend is omdat:
+
+** placeholders verdwijnen zodra je typt,
+
+** ze eruit kunnen zien als ingevulde tekst,
+
+** ze niet meer gebruikt kunnen worden voor voorbeelden.
+
+Zelfs grote systemen zoals Material Design van Google namen deze aanpak over, maar onderzoek liet later zien dat gebruikers de lijnen onder inputvelden verwarren met gewone scheidingslijnen.
+
+De uiteindelijke oplossing die vaak wordt gebruikt (floating labels) is volgens de tekst een onnodig complexe oplossing voor een probleem dat nooit bestond.
+
+Key points
+
+Er is een spanningsveld tussen gebruiksvriendelijkheid (gebruikers) en innovatie (designers).
+
+Veel designbeslissingen breken bestaande webconventies die juist helpen bij usability.
+
+Voorbeelden van slechte “innovatie”:
+
+** onderstrepingen bij links verwijderen
+
+** minimalistische text inputs zonder duidelijke labels
+
+Placeholders als labels veroorzaken verwarring en verminderen functionaliteit.
+
+Grote designsystemen hebben deze patronen verspreid ondanks usability problemen.
+
+De simpelste en beste oplossing: houd duidelijke labels boven inputvelden en respecteer bestaande conventies.
