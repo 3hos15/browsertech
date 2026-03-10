@@ -163,7 +163,7 @@ wat is echt handig?
 
 
 **Weekly geek** <br>
-De video gebruikt de metafoor van “twee wolven in jezelf” om het conflict te beschrijven tussen webgebruikers en webdesigners.
+De video van Heydon Pickering ("I am a freelance technical writer and designer for the web, focused on inclusive design and design systems. I am also an editor and international speaker.") gebruikt de metafoor van “twee wolven in jezelf” om het conflict te beschrijven tussen webgebruikers en webdesigners.
 
 Adrian staat voor de gebruiker: die wil dat websites duidelijk, herkenbaar en makkelijk te gebruiken zijn.
 
