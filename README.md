@@ -15,39 +15,39 @@ Ik wilde graag bij input type date als value alleen het jaar (dus dd/mm/2026) ma
 ## Week 3
 
 ### Dag 1 – maandag 16 feb
-**Wat heb ik vandaag gedaan:**
+**Wat heb ik vandaag gedaan:**<br>
 Hoorcollege over formulieren gevolgd en begonnen aan HTML voor het formulier erfbelasting. De eerste pagina van het formulier staat erin.
 
-**Hoelang duurde het:**
+**Hoelang duurde het:**<br>
 Heledag goed bezig geweest
 
-**Wat heb ik geleerd:**
+**Wat heb ik geleerd:**<br>
 Veel over formulieren
 * Fieldset
 * Legends
 * Attributes
 * Nieuwe info input types
 
-**Wat ga ik morgen doen:**
+**Wat ga ik morgen doen:**<br>
 Verder aan formulier, onderzoeken ns vormgeving en beginnen aan vormgeven
 
 ---
 
 ### Dag 2 - dinsdag 17 feb
 
-**Wat heb ik vandaag gedaan:**
+**Wat heb ik vandaag gedaan:**<br>
 weekly geek
 workshop van victor
 
 styling en javascript 
 
-**Hoelang duurde het:**
+**Hoelang duurde het:**<br>
 De heledag naast pauze (vandaag zat ik er wel een beetje doorheen)
 
-**Wat heb ik geleerd:**
+**Wat heb ik geleerd:**<br>
 Read only in html en css
 
-**Wat ga ik morgen doen:**
+**Wat ga ik morgen doen:**<br>
 verder werken aan de styling, skip naar vraag 1b etc
 2e pattern er in en CSS kickoff
 
@@ -72,29 +72,29 @@ Wat ik deze week vooral heb geleerd, is dat vormgeving, techniek en gebruikerser
 
 ### Dag 4 - maandag 2 maart
 
-**Wat heb ik vandaag gedaan:**
+**Wat heb ik vandaag gedaan:**<br>
 Workshop gevolgd over validation met alleen css. Gewerkt aan erfbelasting formulier. Ingelezen over de weekly geek en begonnen aan een voorbeeld
 
-**Hoelang duurde het:**
+**Hoelang duurde het:**<br>
 -
 
-**Wat heb ik geleerd:**
+**Wat heb ik geleerd:**<br>
 Hoe ik met  alleen html en css een formulier kan valideren
 
-**Wat ga ik morgen doen:**
+**Wat ga ik morgen doen:**<br>
 De weekly geek opdracht met het groepje maken. Workshop volgen en verder werken aan BT. Extra informatie formulier toepassen (aside)?
 
 ### Dag 5 - dinsdag 3 maart
 
-**Wat heb ik vandaag gedaan:**
-**Weekly geek**
-Voor de weekly geek heb ik met mijn groepje radio buttons en checkboxen onderzocht. We hebben gekeken naar hoe je ze zelf kan maken dmv divs en spans. Ik had gekeken naar de checkboxes, hiervoor moet je de volgende dingen in je HTML, CSS en Javascript zetten:
+**Wat heb ik vandaag gedaan:**<br>
+**Weekly geek**<br>
+Voor de weekly geek heb ik met mijn groepje radio buttons en checkboxen onderzocht. We hebben gekeken naar hoe je ze zelf kan maken dmv divs en spans. Ik had gekeken naar de checkboxes, hiervoor moet je de volgende dingen in je HTML, CSS en Javascript zetten:<br>
 <img src="readme-images/chkbhtml.png" width="200">
 <img src="readme-images/chkbcss.png" width="200">
 <img src="readme-images/chkbjava.png" width="200">
 
 De checkbox kan je bedienen door te tabben en op space te drukken, ook hebben we toegevoegd dat je ook er op kan klikken.
-Zo ziet het eruit:
+Zo ziet het eruit:<br>
 <img src="readme-images/chkb.png" width="200">
 <img src="readme-images/chkbx.png" width="200">
 
@@ -132,9 +132,9 @@ Als javascript uit staat moet je formulier nogsteeds kunnen werken
 
 MDN validity state
 
-**Hoelang duurde het:**
+**Hoelang duurde het:**<br>
 De hele dag naast workshops en pauzes 
-**Wat heb ik geleerd:**
+**Wat heb ik geleerd:**<br>
 Valideren met javascript
 
 **Wat ga ik morgen doen:**
@@ -155,7 +155,7 @@ Herhaling user-invalid. Geleerd over aria-live="polite" en aria-describedby attr
 
 https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby
 
-**Gesprek BT ingehaald**
+**Gesprek BT ingehaald** <br>
 progessive disclore meerdere html
 informatie vragen
 validatie toevoegen
