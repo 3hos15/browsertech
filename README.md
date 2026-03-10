@@ -169,7 +169,7 @@ Adrian staat voor de gebruiker: die wil dat websites duidelijk, herkenbaar en ma
 
 Chris staat voor de designer: die wil innoveren en dingen anders doen, vaak om origineel te lijken.
 
-Het probleem ontstaat wanneer designers bestaande interface-conventies veranderen terwijl die eigenlijk prima werken voor gebruikers. Daardoor wordt een interface moeilijker te begrijpen.
+Het probleem ontstaat wanneer designers bestaande interface conventies veranderen terwijl die eigenlijk prima werken voor gebruikers. Daardoor wordt een interface moeilijker te begrijpen.
 
 Voorbeelden:
 
@@ -210,3 +210,7 @@ Placeholders als labels veroorzaken verwarring en verminderen functionaliteit.
 Grote designsystemen hebben deze patronen verspreid ondanks usability problemen.
 
 De simpelste en beste oplossing: houd duidelijke labels boven inputvelden en respecteer bestaande conventies.
+
+Mijn mening:
+
+Ik vond het een interessante video, zeker met de animatie en.. taal gebruik. Het idee dat als je als designer wilt "afwijken" van het origineel komt me bekend voor. We willen altijd nieuwe dingen maken, maar in realiteit is bijna niks echt nieuw. Bij bepaalde dingen zoals text input en placeholder ben ik het er wel mee eens dat het het beste is om je aan het "origineel" aspect te houden. Mensen die niet veel ervaring hebben met het web kunnen moeite hebben met de (bijv.) innovatieve text input, dit maakt het gebruiken van je gemaakte website niet fijn voor de gebruikers. Ik denk dat ik zelf tussen de twee wolven zit. Ik wil graag innovatief zijn maar ik hou me wel aan bepaalde "regels" die het web fijn maken voor de gebruikers.
