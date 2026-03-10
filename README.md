@@ -87,7 +87,7 @@ De weekly geek opdracht met het groepje maken. Workshop volgen en verder werken 
 ### Dag 5 - dinsdag 3 maart
 
 **Wat heb ik vandaag gedaan:**
-* Weekly geek
+**Weekly geek**
 Voor de weekly geek heb ik met mijn groepje radio buttons en checkboxen onderzocht. We hebben gekeken naar hoe je ze zelf kan maken dmv divs en spans. Ik had gekeken naar de checkboxes, hiervoor moet je de volgende dingen in je HTML, CSS en Javascript zetten:
 <img src="readme-images/chkbhtml.png" width="200">
 <img src="readme-images/chkbcss.png" width="200">
@@ -147,7 +147,7 @@ Valideren met javascript
 
 ### Dag 6 - maandag 9 maart
 
-* Workshop van Victor <br>
+**Workshop van Victor** <br>
 https://codepen.io/3hos15/pen/PwGGGRM <br>
 <img src="readme-images/wrkshopnegenmaart.png" width="200"> <br>
 
@@ -155,14 +155,14 @@ Herhaling user-invalid. Geleerd over aria-live="polite" en aria-describedby attr
 
 https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby
 
-* Gesprek BT ingehaald
+**Gesprek BT ingehaald**
 progessive disclore meerdere html
 informatie vragen
 validatie toevoegen
 wat is echt handig?
 
 
-* Weekly geek 
+**Weekly geek**
 De video gebruikt de metafoor van “twee wolven in jezelf” om het conflict te beschrijven tussen webgebruikers en webdesigners.
 
 Adrian staat voor de gebruiker: die wil dat websites duidelijk, herkenbaar en makkelijk te gebruiken zijn.
@@ -183,17 +183,17 @@ Het is onduidelijk waar je tekst moet invoeren.
 
 Designers plaatsen labels vervolgens als placeholder in het veld, wat verwarrend is omdat:
 
-** placeholders verdwijnen zodra je typt,
+* placeholders verdwijnen zodra je typt,
 
-** ze eruit kunnen zien als ingevulde tekst,
+* ze eruit kunnen zien als ingevulde tekst,
 
-** ze niet meer gebruikt kunnen worden voor voorbeelden.
+* ze niet meer gebruikt kunnen worden voor voorbeelden.
 
 Zelfs grote systemen zoals Material Design van Google namen deze aanpak over, maar onderzoek liet later zien dat gebruikers de lijnen onder inputvelden verwarren met gewone scheidingslijnen.
 
 De uiteindelijke oplossing die vaak wordt gebruikt (floating labels) is volgens de tekst een onnodig complexe oplossing voor een probleem dat nooit bestond.
 
-Key points
+Key points:
 
 Er is een spanningsveld tussen gebruiksvriendelijkheid (gebruikers) en innovatie (designers).
 
@@ -201,9 +201,9 @@ Veel designbeslissingen breken bestaande webconventies die juist helpen bij usab
 
 Voorbeelden van slechte “innovatie”:
 
-** onderstrepingen bij links verwijderen
+* onderstrepingen bij links verwijderen
 
-** minimalistische text inputs zonder duidelijke labels
+* minimalistische text inputs zonder duidelijke labels
 
 Placeholders als labels veroorzaken verwarring en verminderen functionaliteit.
 
