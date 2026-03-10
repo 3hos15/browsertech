@@ -162,7 +162,7 @@ validatie toevoegen
 wat is echt handig?
 
 
-**Weekly geek**
+**Weekly geek** <br>
 De video gebruikt de metafoor van “twee wolven in jezelf” om het conflict te beschrijven tussen webgebruikers en webdesigners.
 
 Adrian staat voor de gebruiker: die wil dat websites duidelijk, herkenbaar en makkelijk te gebruiken zijn.
