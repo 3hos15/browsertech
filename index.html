@@ -8,15 +8,16 @@
 </head>
 
 
-<body>
+<body id="top">
     <header>
-    <h1>Aangifte erfbelasting</h1>
-    <p>Dit is een studenten opdracht!</p>
+        <img src="images/nslogo.svg" alt="">
+        <h1>Aangifte erfbelasting</h1>
+        <p>Dit is een studenten opdracht!</p>
     </header>
 
     <main>
         <section>
-            <form>
+            <form id="erfbelastingForm" action="#">
                 
                 <fieldset>
                     <legend>Gegevens van de overledene</legend>
@@ -25,7 +26,7 @@
                     <legend>Persoonsgegevens overledene</legend>
                         <label>
                             Voorletter(s)
-                            <input type="text" name="voornaam">
+                            <input type="text" name="voornaam" required>
                         </label>
 
                         <label>
@@ -34,48 +35,58 @@
                         </label>
                         <label>
                             Achternaam
-                            <input type="text" name="achternaam">
+                            <input type="text" name="achternaam" required>
                         </label>
                         <label>
-                            Bsn overledene
-                            <input pattern="[0-9]{9} regular expressions" type="text" name="bsn" minlength="9" maxlength="9">
+                            BSN
+                            <input type="text" name="bsn" minlength="9" maxlength="9" pattern="[0-9]{9}" required>
                         </label>
                         <label>
                             Overlijdensdatum
-                            <input type="date" name="overlijdensdatum" min="2025-02-16" max="2026-02-16">
+                            <input type="date" name="overlijdensdatum" min="2025-02-16" max="2026-02-16" required>
                         </label>
+                        <!-- <button type="button" id="checkOverledene">check</button> -->
+
                     </fieldset>
 
                     <fieldset id="overledene-getrouwd" class="step">
                         <legend>
                             Was de overledene getrouwd of had de overledene een
-                            geregistreerde partner op het moment van overlijden?</legend>
-                            <details class="help">
-                                <summary>?</summary>
-                                <p>Is er geen testament? En had de overledene een echtgenoot
-                                    of geregistreerde partner en kinderen? Dan gaat de hele
-                                    erfenis naar de echtgenoot of geregistreerde partner. De
-                                    kinderen krijgen hun deel van de erfenis nog niet, maar
-                                    krijgen een vordering op de andere ouder. Dat wil zeggen
-                                    dat die ouder een schuld heeft aan de kinderen. De kinderen
-                                    moeten wel aangifte doen voor de erfbelasting
-                                    (zie ook 2.1.4).
-                                    Huwelijkse voorwaarden of partnerschapsvoorwaarden
-                                    Echtgenoten en geregistreerde partners kunnen afspraken
-                                    maken over huwelijkse voorwaarden of partnerschapsvoorwaarden. Daarin regelen zij welke bezittingen en
-                                    schulden van hen allebei zijn en welke bezittingen en
-                                    schulden van 1 van hen zijn. Huwelijkse voorwaarden of
-                                    partnerschapsvoorwaarden zijn altijd in een notariële aktevastgelegd.</p>
-                            </details>
-                        <label>
-                            Nee
-                            <input type="radio" id="getrouwdnee" name="getrouwd" value="nee">
-                        </label>
+                            geregistreerde partner op het moment van overlijden?
+                        
+                        </legend>
+                        <details class="help">
+                            <summary></summary>
+                            <p>Is er geen testament? En had de overledene een echtgenoot
+                                of geregistreerde partner en kinderen? Dan gaat de hele
+                                erfenis naar de echtgenoot of geregistreerde partner. De
+                                kinderen krijgen hun deel van de erfenis nog niet, maar
+                                krijgen een vordering op de andere ouder. Dat wil zeggen
+                                dat die ouder een schuld heeft aan de kinderen. De kinderen
+                                moeten wel aangifte doen voor de erfbelasting
+                                (zie ook 2.1.4). <br><br>
+                                <span>Huwelijkse voorwaarden of partnerschapsvoorwaarden</span> <br>
+                                Echtgenoten en geregistreerde partners kunnen afspraken
+                                maken over huwelijkse voorwaarden of partnerschapsvoorwaarden. Daarin regelen zij welke bezittingen en
+                                schulden van hen allebei zijn en welke bezittingen en
+                                schulden van 1 van hen zijn. Huwelijkse voorwaarden of
+                                partnerschapsvoorwaarden zijn altijd in een notariële aktevastgelegd.</p>
+                        </details>
 
-                        <label>
-                            Ja
-                            <input type="radio" id="getrouwdja" name="getrouwd" value="ja">
-                        </label>
+                        <div class="radioflex">
+                            <label class="radioselect">
+                                Nee
+                                <input type="radio" id="getrouwdnee" name="getrouwd" value="nee" required>
+                            </label>
+
+                            <label class="radioselect">
+                                Ja
+                                <input type="radio" id="getrouwdja" name="getrouwd" value="ja">
+                            </label>
+                        </div>
+
+                    
+
                     </fieldset>
 
                     <fieldset id="overledene-akte" class="step">
@@ -84,124 +95,244 @@
                             laten vastleggen in een notariële akte?
                         </legend>
 
-                        <label>
-                            Nee
-                            <input type="radio" id="aktenee" name="akte" value="nee">
-                        </label>
+                        <details class="help">
+                            <summary></summary>
+                            <p>Is er geen testament? En had de overledene een echtgenoot
+                                of geregistreerde partner en kinderen? Dan gaat de hele
+                                erfenis naar de echtgenoot of geregistreerde partner. De
+                                kinderen krijgen hun deel van de erfenis nog niet, maar
+                                krijgen een vordering op de andere ouder. Dat wil zeggen
+                                dat die ouder een schuld heeft aan de kinderen. De kinderen
+                                moeten wel aangifte doen voor de erfbelasting
+                                (zie ook 2.1.4). <br><br>
+                                <span>Huwelijkse voorwaarden of partnerschapsvoorwaarden</span> <br>
+                                Echtgenoten en geregistreerde partners kunnen afspraken
+                                maken over huwelijkse voorwaarden of partnerschapsvoorwaarden. Daarin regelen zij welke bezittingen en
+                                schulden van hen allebei zijn en welke bezittingen en
+                                schulden van 1 van hen zijn. Huwelijkse voorwaarden of
+                                partnerschapsvoorwaarden zijn altijd in een notariële aktevastgelegd.</p>
+                        </details>
 
-                        <label>
-                            Ja
-                            <input type="radio" id="akteja" name="akte" value="ja">
-                        </label>
+                        <div class="radioflex">
+                            <label class="radioselect">
+                                Nee
+                                <input type="radio" id="aktenee" name="akte" value="nee" required>
+                            </label>
+
+                            <label class="radioselect">
+                                Ja
+                                <input type="radio" id="akteja" name="akte" value="ja">
+                            </label>
+                        </div>
                     </fieldset>
 
                     <fieldset id="overledene-verrekenbeding" class="step">
                         <legend>Hadden de overledene en diens partner een finaal verrekenbeding?</legend>
 
-                        <label>
-                            Nee
-                            <input type="radio" id="verrekenbedingnee" name="verrekenbeding" value="nee">
-                        </label>
+                        <details class="help">
+                            <summary></summary>
+                            <p>Is er geen testament? En had de overledene een echtgenoot
+                                of geregistreerde partner en kinderen? Dan gaat de hele
+                                erfenis naar de echtgenoot of geregistreerde partner. De
+                                kinderen krijgen hun deel van de erfenis nog niet, maar
+                                krijgen een vordering op de andere ouder. Dat wil zeggen
+                                dat die ouder een schuld heeft aan de kinderen. De kinderen
+                                moeten wel aangifte doen voor de erfbelasting
+                                (zie ook 2.1.4). <br><br>
+                                <span>Huwelijkse voorwaarden of partnerschapsvoorwaarden</span> <br>
+                                Echtgenoten en geregistreerde partners kunnen afspraken
+                                maken over huwelijkse voorwaarden of partnerschapsvoorwaarden. Daarin regelen zij welke bezittingen en
+                                schulden van hen allebei zijn en welke bezittingen en
+                                schulden van 1 van hen zijn. Huwelijkse voorwaarden of
+                                partnerschapsvoorwaarden zijn altijd in een notariële aktevastgelegd.</p>
+                        </details>
 
-                        <label>
-                            Ja
-                            <input type="radio" id="verrekenbedingja" name="verrekenbeding" value="ja">
-                        </label>
+                        <div class="radioflex">
+                            <label class="radioselect">
+                                Nee
+                                <input type="radio" id="verrekenbedingnee" name="verrekenbeding" value="nee" required>
+                            </label>
+
+                            <label class="radioselect">
+                                Ja
+                                <input type="radio" id="verrekenbedingja" name="verrekenbeding" value="ja">
+                            </label>
+                        </div>
                     </fieldset>
 
                     <fieldset id="partnerschapsvoorwaarden" class="step">
                         <legend>Datum huwelijkse of partnerschapsvoorwaarden</legend>
                         <label>
                             Dag
-                            <input type="number" name="dagpartnerschapsvoorwaarden" minlength="1" maxlength="2">
+                            <input type="number" name="dagpartnerschapsvoorwaarden" minlength="1" maxlength="2" required>
                         </label>
                         <label>
                             Maand
-                            <input type="number" name="maandpartnerschapsvoorwaarden" minlength="1" maxlength="2">
+                            <input type="number" name="maandpartnerschapsvoorwaarden" minlength="1" maxlength="2" required>
                         </label>
                         <label>
                             Jaar
-                            <input type="number" name="jaarpartnerschapsvoorwaarden" minlength="4" maxlength="4">
+                            <input type="number" name="jaarpartnerschapsvoorwaarden" minlength="4" maxlength="4" required>
                         </label>
                     </fieldset>
 
                     <fieldset id="overledene-kinderen" class="step">
                         <legend>Had de overledene kinderen?</legend>
 
-                        <label>
-                            Nee
-                            <input type="radio" id="kinderennee" name="kinderen" value="nee">
-                        </label>
+                        <details class="help">
+                            <summary></summary>
+                            <p>Is er geen testament? En had de overledene een echtgenoot
+                                of geregistreerde partner en kinderen? Dan gaat de hele
+                                erfenis naar de echtgenoot of geregistreerde partner. De
+                                kinderen krijgen hun deel van de erfenis nog niet, maar
+                                krijgen een vordering op de andere ouder. Dat wil zeggen
+                                dat die ouder een schuld heeft aan de kinderen. De kinderen
+                                moeten wel aangifte doen voor de erfbelasting
+                                (zie ook 2.1.4). <br><br>
+                                <span>Huwelijkse voorwaarden of partnerschapsvoorwaarden</span> <br>
+                                Echtgenoten en geregistreerde partners kunnen afspraken
+                                maken over huwelijkse voorwaarden of partnerschapsvoorwaarden. Daarin regelen zij welke bezittingen en
+                                schulden van hen allebei zijn en welke bezittingen en
+                                schulden van 1 van hen zijn. Huwelijkse voorwaarden of
+                                partnerschapsvoorwaarden zijn altijd in een notariële aktevastgelegd.</p>
+                        </details>
 
-                        <label>
-                            Ja
-                            <input type="radio" id="kinderenja" name="kinderen" value="ja">
-                        </label>
+                        <div class="radioflex">
+                            <label class="radioselect">
+                                Nee
+                                <input type="radio" id="kinderennee" name="kinderen" value="nee" required>
+                            </label>
+
+                            <label class="radioselect">
+                                Ja
+                                <input type="radio" id="kinderenja" name="kinderen" value="ja">
+                            </label>
+                        </div>
                     </fieldset>
 
                     <fieldset id="kinderen-overleden" class="step">
                         <legend>Is 1 van deze kinderen eerder overleden dan de overledene voor wie u nu aangifte doet?</legend>
 
-                        <label>
-                            Nee
-                            <input type="radio" id="eerderoverledennee" name="eerderoverleden" value="nee">
-                        </label>
+                        <details class="help">
+                            <summary></summary>
+                            <p>Is er geen testament? En had de overledene een echtgenoot
+                                of geregistreerde partner en kinderen? Dan gaat de hele
+                                erfenis naar de echtgenoot of geregistreerde partner. De
+                                kinderen krijgen hun deel van de erfenis nog niet, maar
+                                krijgen een vordering op de andere ouder. Dat wil zeggen
+                                dat die ouder een schuld heeft aan de kinderen. De kinderen
+                                moeten wel aangifte doen voor de erfbelasting
+                                (zie ook 2.1.4). <br><br>
+                                <span>Huwelijkse voorwaarden of partnerschapsvoorwaarden</span> <br>
+                                Echtgenoten en geregistreerde partners kunnen afspraken
+                                maken over huwelijkse voorwaarden of partnerschapsvoorwaarden. Daarin regelen zij welke bezittingen en
+                                schulden van hen allebei zijn en welke bezittingen en
+                                schulden van 1 van hen zijn. Huwelijkse voorwaarden of
+                                partnerschapsvoorwaarden zijn altijd in een notariële aktevastgelegd.</p>
+                        </details>
 
-                        <label>
-                            Ja
-                            <input type="radio" id="eerderoverledenja" name="eerderoverleden" value="ja">
-                        </label>
+                        <div class="radioflex">
+                            <label class="radioselect">
+                                Nee
+                                <input type="radio" id="eerderoverledennee" name="eerderoverleden" value="nee" required>
+                            </label>
+
+                            <label class="radioselect">
+                                Ja
+                                <input type="radio" id="eerderoverledenja" name="eerderoverleden" value="ja">
+                            </label>
+                        </div>
                     </fieldset>
 
                     <fieldset id="kinderen-kind" class="step">
                         <legend>Had dit overleden kind zelf kinderen?</legend>
 
-                        <label>
-                            Nee
-                            <input type="radio" id="kindkindnee" name="kindkind" value="nee">
-                        </label>
+                        <details class="help">
+                            <summary></summary>
+                            <p>Is er geen testament? En had de overledene een echtgenoot
+                                of geregistreerde partner en kinderen? Dan gaat de hele
+                                erfenis naar de echtgenoot of geregistreerde partner. De
+                                kinderen krijgen hun deel van de erfenis nog niet, maar
+                                krijgen een vordering op de andere ouder. Dat wil zeggen
+                                dat die ouder een schuld heeft aan de kinderen. De kinderen
+                                moeten wel aangifte doen voor de erfbelasting
+                                (zie ook 2.1.4). <br><br>
+                                <span>Huwelijkse voorwaarden of partnerschapsvoorwaarden</span> <br>
+                                Echtgenoten en geregistreerde partners kunnen afspraken
+                                maken over huwelijkse voorwaarden of partnerschapsvoorwaarden. Daarin regelen zij welke bezittingen en
+                                schulden van hen allebei zijn en welke bezittingen en
+                                schulden van 1 van hen zijn. Huwelijkse voorwaarden of
+                                partnerschapsvoorwaarden zijn altijd in een notariële aktevastgelegd.</p>
+                        </details>
 
-                        <label>
-                            Ja
-                            <input type="radio" id="kindkindja" name="kindkind" value="ja">
-                        </label>
+                        <div class="radioflex">
+                            <label class="radioselect">
+                                Nee
+                                <input type="radio" id="kindkindnee" name="kindkind" value="nee" required>
+                            </label>
+
+                            <label class="radioselect">
+                                Ja
+                                <input type="radio" id="kindkindja" name="kindkind" value="ja">
+                            </label>
+                        </div>
                     </fieldset>
 
                     <fieldset id="overledene-testament" class="step">
                         <legend>Had de overledene een testament?</legend>
 
-                        <label>
+                        <details class="help">
+                            <summary></summary>
+                            <p>Is er geen testament? En had de overledene een echtgenoot
+                                of geregistreerde partner en kinderen? Dan gaat de hele
+                                erfenis naar de echtgenoot of geregistreerde partner. De
+                                kinderen krijgen hun deel van de erfenis nog niet, maar
+                                krijgen een vordering op de andere ouder. Dat wil zeggen
+                                dat die ouder een schuld heeft aan de kinderen. De kinderen
+                                moeten wel aangifte doen voor de erfbelasting
+                                (zie ook 2.1.4). <br><br>
+                                <span>Huwelijkse voorwaarden of partnerschapsvoorwaarden</span> <br>
+                                Echtgenoten en geregistreerde partners kunnen afspraken
+                                maken over huwelijkse voorwaarden of partnerschapsvoorwaarden. Daarin regelen zij welke bezittingen en
+                                schulden van hen allebei zijn en welke bezittingen en
+                                schulden van 1 van hen zijn. Huwelijkse voorwaarden of
+                                partnerschapsvoorwaarden zijn altijd in een notariële aktevastgelegd.</p>
+                        </details>
+
+                        <div class="radioflex">
+                        <label class="radioselect">
                             Nee. Ga verder met vraag 2.
-                            <input type="radio" id="testamentnee" name="testament" value="nee">
+                            <input type="radio" id="testamentnee" name="testament" value="nee" required>
                         </label>
 
-                        <label>
+                        <label class="radioselect">
                             Ja
                             <input type="radio" id="testamentja" name="testament" value="ja">
                         </label>
+                    </div>
                     </fieldset>
 
                     <fieldset id="gegevens-notaris" class="step">
                         <legend>Gegevens notaris</legend>
                         <label>
                             Protocolnummer
-                            <input type="number" name="Protocolnummer" minlength="6" maxlength="6">
+                            <input type="number" name="Protocolnummer" minlength="6" maxlength="6" required>
                         </label>
                         <label>
                             Voorletter(s)
-                            <input type="text" name="voornaam">
+                            <input type="text" name="voornaamnotaris" required>
                         </label>
                         <label>
                             Tussenvoegsel(s)
-                            <input type="text" name="tussenvoegsel">
+                            <input type="text" name="tussenvoegselnotaris">
                         </label>
                         <label>
                             Achternaam
-                            <input type="text" name="achternaam">
+                            <input type="text" name="achternaamnotaris" required>
                         </label>
                         <label>
                             Vestiginsplaats
-                            <input type="text" name="vestiginsplaats">
+                            <input type="text" name="vestiginsplaats" required>
                         </label>
                     </fieldset>
 
@@ -209,41 +340,37 @@
                         <legend>Datum van het testament of van de laatste wijziging</legend>
                         <label>
                             Dag
-                            <input type="number" name="dagtestament" minlength="1" maxlength="2">
+                            <input type="number" name="dagtestament" minlength="1" maxlength="2" required>
                         </label>
                         <label>
                             Maand
-                            <input type="number" name="maandtestament" minlength="1" maxlength="2">
+                            <input type="number" name="maandtestament" minlength="1" maxlength="2" required>
                         </label>
                         <label>
                             Jaar
-                            <input type="number" name="jaartestament" minlength="4" maxlength="4">
+                            <input type="number" name="jaartestament" minlength="4" maxlength="4" required>
                         </label>
                     </fieldset>
-
-                    <!-- <nav class="form-nav">
-                        <button type="button" id="prevbutton"> < Vorige</button>
-                        <button type="button" id="nextbutton">Volgende ></button>
-                        <button type="submit" id="submitbutton">Versturen</button>
-                    </nav>
-
-                </fieldset>
-
-
-                <fieldset>
-                    <legend>Samenstelling van de erfenis</legend>
-                    
-                </fieldset> -->
+                    <button type="submit">Verstuur</button>
             </form>
         </section>
     </main>
 
     <footer>
         <div>
-            <p>---</p>
-        </div>
+            <a href="#top" aria-label="Back to top">
+              <svg class="nslogo" viewBox="-2.04189744 -2.04189744 178.37648488 72.14704288">
+                <path
+                  d="M 76.19003,32.7088 C 72.73763,29.33945 68.00393,27.23954 62.8194,27.23954 L 26.08874,27.23954 L 39.67292,13.61977 L 74.23248,13.61977 C 75.69174,13.6435 77.05609,14.28415 78.01707,15.24513 L 98.07894,35.36632 C 101.53134,38.7238 106.25317,40.83558 111.47329,40.83558 L 148.23955,40.83558 L 134.63165,54.45535 L 100.10767,54.45535 C 98.62468,54.40789 97.28406,53.77911 96.31122,52.78254 L 76.19003,32.7088 z M 86.68959,62.43976 C 90.10639,65.89216 94.85196,68.06325 100.10767,68.06325 L 140.23141,68.06325 L 174.29269,34.03756 L 140.23141,0 L 121.00001,0 L 148.23955,27.23954 L 111.47329,27.23954 C 110.0259,27.23954 108.67351,26.65821 107.7243,25.73282 L 87.6387,5.64723 C 84.19817,2.15924 79.46447,0.01187 74.23248,0 L 34.04952,0 L 0,34.03756 L 34.04952,68.06325 L 53.29268,68.06325 L 26.08874,40.83558 L 62.8194,40.83558 C 64.27866,40.83558 65.59556,41.41691 66.5684,42.36602 L 86.68959,62.43976"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </a>
+          </div>
     </footer>
 
     <script src="script/main.js"></script>
+    <script src="script/form.js"></script>
 </body>
 </html>

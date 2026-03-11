@@ -9,10 +9,15 @@
     --grey-bg: #f4f4f887;
     --ns-yellow: #ffc917;
     --ns-yellow-hover: #e7b81d;
+    --invalid-input: rgb(155, 41, 41);
     --ns-blue-text: #003082;
     --ns-blue-link:#0063d3;
     --ns-green-progress: #00a888;
     --ns-darkpurple-infotext: #503fa7;
+    --ns-darkpurple-infohover: #7e69e3;
+    --ns-darkpurple-bg-border: #7163b738;
+    --ns-darkpurple-bg: #c0b9e433;
+    --ns-darkpurple-bg-bigscreen: #efecff;
     --ns-lightpurple-info: #f5f3fe;
     --ns-lightpurple-infoborder:#dcd6fb;
 }
@@ -38,6 +43,10 @@ header, footer {
         font-size: 2em;
         padding: 0;
         margin: .5em 0 0 0;
+
+        @media (max-width: 500px) {
+            font-size: 1.8em;
+        }
     }
 
     p {
@@ -50,14 +59,66 @@ header, footer {
 header {
     box-shadow: 0px 3px 3px rgb(230, 230, 230);
     background-color: var(--white-bg);
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    height: 6em;
 
+
+}
+
+img:not(footer img) {
+    position: absolute;
+    left: 1em;
+    top: 1em;;
+    display: block;
+    width: 5em;
+    height: auto;
+    margin-top: 1em;
+
+
+    @media (max-width: 700px) {
+        width: 3em;
+        transition: 200ms;
+        top: 1.5em;
+    }
+
+    @media (max-width: 500px) {
+        width: 2em;
+        transition: 200ms;
+        top: 3em;
+    }
 }
 
 
 footer {
     padding: 1em;
-    background-color: var(--ns-yellow);
+    box-shadow: 0px -3px 3px rgb(230, 230, 230);
+    background-color: var(--white-bg);
 
+    img {
+        width: 3em;
+        height: auto;
+    }
+}
+
+footer {
+    padding: 1rem;
+}
+
+.nslogo {
+    width: 4em;
+    color: var(--ns-blue-text);
+    transition: 200ms;
+
+    @media (max-width: 500px) {
+        width: 2.3em;
+
+    }
+}
+
+footer a:hover .nslogo {
+    color: var(--ns-yellow);
 }
 
 form {
@@ -78,6 +139,10 @@ form > fieldset > legend {
 padding: 0;
 font-size: 1.3em;
 padding: 0.5em 0 1em 1em;
+
+    @media (max-width: 500px) {
+        font-size: 1.2em;
+    }
 }
 
 
@@ -87,28 +152,39 @@ fieldset > fieldset{
     padding: 1em;
     background-color: var(--white-bg);
     border: none;
-    /* border: 1px solid var(--ns-lightpurple-infoborder); */
     border-radius: 10px;
     margin-bottom: 2em;
 
     legend {
         font-size: 1.1em;
-        font-weight: 00;
-    }
-    &:has(input[type="radio"]) {
-        display: flex;    
+        font-weight: 600;
+        /* background-color: var(--white-bg);
+
+        position: sticky;
+        top: 4.79em;
+
+        z-index: 999; */
+        padding-bottom: .5em;
+        border-bottom: 3px solid var(--ns-yellow);
+
+            @media (max-width: 500px) {
+                font-size: 1em;
+            }
+
     }
 }
 
-label {
-    font-weight: 600;
-}
+
 
 label:has(input[type="text"], input[type="number"], input[type="date"]) {
     margin-bottom: .5em;
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
+
+    @media (max-width: 500px) {
+        font-size: .9em;
+    }
 }
 
 input[type="text"], input[type="number"], input[type="date"] {
@@ -122,40 +198,96 @@ input[type="text"], input[type="number"], input[type="date"] {
 
         &:focus {
             outline: none;
+            border-color: var(--ns-yellow);
+            box-shadow: 0 0 0 2px var(--ns-yellow);
+            transition: 200ms;
+        }
+
+        &:user-valid{
             border-color: var(--ns-green-progress);
             box-shadow: 0 0 0 2px var(--ns-green-progress);
             transition: 200ms;
         }
+
+        &:user-invalid{
+            border-color: var(--invalid-input);
+            box-shadow: 0 0 0 2px var(--invalid-input);
+            transition: 200ms;
+        }
+
+        @media (max-width: 500px) {
+            height: 2em;
+        }
 }
 
-input[type="radio"] {
-    width: 1.2em;
-    height: 1.2em;
-    margin-right: .5em;
-    accent-color: var(--ns-green-progress);
+
+.radioselect {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border: 1px solid rgb(160, 160, 160);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: border-color 200ms, background-color 200ms, color 200ms;
+    user-select: none;
+    position: relative;
+
+        &:hover {
+            border: 2px solid var(--ns-yellow);
+            border-color: var(--ns-yellow);
+        }
+
+        @media (max-width: 500px) {
+            font-size: 0.9em;
+        }
 }
 
-label:has(input[type="radio"]) {
+.radioselect input[type="radio"] {
+    appearance: none;
+    position: absolute;
+}
+
+.radioselect:has(input:checked) {
+    border-color: var(--ns-yellow);
+    border: 2px solid var(--ns-yellow);
+}
+
+.radioselect:has(input:user-invalid) {
+    border: 2px solid var(--invalid-input);
+    border-color: var(--invalid-input);
+}
+
+.radioselect:has(input:user-valid:checked) {
+    border: 2px solid var(--ns-green-progress);
+    border-color: var(--ns-green-progress);
+}
+
+
+.radioflex {
     display: flex;
     gap: .5em;
     align-items: center;
 }
-
-/* Legend stays horizontal */
-#overledene-getrouwd legend {
+fieldset:has(input[type="radio"]) {
+    position: relative;
+}
+fieldset:has(input[type="radio"]) legend {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
-/* The question mark (summary) next to legend */
-#overledene-getrouwd details.help summary {
+fieldset:has(input[type="radio"]) details.help summary {
+    position: absolute;
+    top: 1em;
+    right: 1em;
     list-style: none;
     font-size: 0.9rem;
     width: 1.3rem;
     height: 1.3rem;
     border-radius: 50%;
-    background-color: #003082;
+    background-color: var(--ns-darkpurple-infotext);
     color: white;
     display: inline-flex;
     justify-content: center;
@@ -163,27 +295,25 @@ label:has(input[type="radio"]) {
     cursor: pointer;
 
     &:hover {
-        background-color: var(--ns-green-progress);
+        background-color: var(--ns-darkpurple-infohover);
         transition: 500ms;
     }
 
-    &:open {
-        background-color: var(--ns-green-progress);
-    }
 }
 
-/* Extra content below legend */
-#overledene-getrouwd details.help p {
+fieldset:has(input[type="radio"]) details.help p {
     margin-top: 0.5rem;
 }
+.help summary::before {
+    content: "?";
+}
 
-/* Remove default triangle */
 .help summary {
+
     list-style: none;
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 50%;
-    background-color: #003082;
     color: white;
     font-weight: bold;
     font-size: 1rem;
@@ -194,14 +324,74 @@ label:has(input[type="radio"]) {
     padding: 0;
 }
 
-/* Paragraph under the question mark */
+details span {
+    font-weight: 700;
+}
 .help p {
-    margin: 0.5rem 0 0 0;
+    font-size: .9em;
+    color: var(--ns-darkpurple-infotext);
+    margin: 1em;
+    padding: 1em;
+    background-color: var(--ns-darkpurple-bg);
+    border: 1px solid var(--ns-darkpurple-bg-border);
+    border-radius: 10px;
+
+    @media (min-width: 1280px) {
+        background-color: var(--ns-darkpurple-bg-bigscreen);
+        width: 20em;
+        position: absolute;
+        top: -2em;
+        right: -23em;
+    }
+    
 }
 
-.help:open summary {
-    background-color: #ffc917;
-    color: #003082;
+
+summary {
+    transition: 500ms;
+}
+
+details[open] summary {
+    background-color: var(--ns-green-progress);
+    transform: translateY(18px);
+
+    @media (min-width: 1280px) {
+        transform: translateY(0px);
+    }
+}
+details[open] summary::before {
+    content: "×";
+}
+
+
+button[type="submit"] {
+    background-color: var(--ns-yellow);
+    color: var(--ns-blue-text);
+    border: none;
+    width: fit-content;
+    border-radius: 10px;
+    padding: 0.75em 1.5em;
+    margin-bottom: 1.5em;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 200ms, color 200ms;
+
+
+
+        &:hover {
+            background-color: var(--ns-yellow-hover);
+        }
+
+        &:active {
+            background-color: var(--ns-green-progress);
+            box-shadow: 3px 3px 3px rgb(230, 230, 230);
+        }
+
+        @media (max-width: 500px) {
+            width: 100%;
+            padding: 0.75em;
+        }
 }
 
 
@@ -255,7 +445,7 @@ label:has(input[type="radio"]) {
     flex-direction: column;
 } */
 
-.form-nav {
+/* .form-nav {
     display: flex;
     gap: 1rem;
     margin-top: 1rem;
@@ -266,54 +456,34 @@ label:has(input[type="radio"]) {
     font-size: 1.5em;
     font-weight: 600;
 }
-
-
-
-#prevbutton, #nextbutton, #submitbutton {
-    padding: 1em 1em;
-    background-color: var(--ns-yellow);
-    color: var(--ns-blue-text);
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-
-    &:hover {
-        background-color: var(--ns-yellow-hover);
-        transition: 500ms;
-    }
-}
-
-#submitbutton {
-    display: none;
-    background-color: var(--ns-blue-link);
-    color: var(--white-bg);
-
-    &:hover {
-        background-color: var(--ns-blue-text);
-        transition: 500ms;
-    }
-}
-
-
-
-
-
-
-
-
-
-/* .inputs {
-    display: none;
-    margin-top: 20px;
-}
-
-#bsn-radio:checked ~ .inputs,
-#becon-radio:checked ~ .inputs,
-#protocol-radio:checked ~ .inputs {
-display: block;
-}
  */
 
 
+
+
+/* ************************************************
+
+SUMMARY PAGE
+
+************************************************ */
+
+
+.samenvatting {
+
+    main {
+        display: flex;
+        justify-content: center;
+    }
+
+    section {
+        margin-bottom: 1em;
+        max-width: 40em;
+    }
+
+    p {
+        margin: 0.5em 0;
+    }
+
+}
 
 

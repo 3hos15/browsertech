@@ -5,10 +5,10 @@ Ik wilde graag bij input type date als value alleen het jaar (dus dd/mm/2026) ma
 
 ## Dagelijkse vragen
 
-**Wat heb ik vandaag gedaan:**
-**Hoelang duurde het:**
-**Wat heb ik geleerd:**
-**Wat ga ik morgen doen:**
+**Wat heb ik vandaag gedaan:**<br>
+**Hoelang duurde het:**<br>
+**Wat heb ik geleerd:**<br>
+**Wat ga ik morgen doen:**<br>
 
 ---
 
@@ -213,4 +213,20 @@ De simpelste en beste oplossing: houd duidelijke labels boven inputvelden en res
 
 Mijn mening:
 
-Ik vond het een interessante video, zeker met de animatie en.. taal gebruik. Het idee dat als je als designer wilt "afwijken" van het origineel komt me bekend voor. We willen altijd nieuwe dingen maken, maar in realiteit is bijna niks echt nieuw. Bij bepaalde dingen zoals text input en placeholder ben ik het er wel mee eens dat het het beste is om je aan het "origineel" aspect te houden. Mensen die niet veel ervaring hebben met het web kunnen moeite hebben met de (bijv.) innovatieve text input, dit maakt het gebruiken van je gemaakte website niet fijn voor de gebruikers. Ik denk dat ik zelf tussen de twee wolven zit. Ik wil graag innovatief zijn maar ik hou me wel aan bepaalde "regels" die het web fijn maken voor de gebruikers.
+Ik vond het een interessante video, zeker met de animatie en.. taal gebruik. Het idee dazt als je als designer wilt "afwijken" van het origineel komt me bekend voor. We willen altijd nieuwe dingen maken, maar in realiteit is bijna niks echt nieuw. Bij bepaalde dingen zoals text input en placeholder ben ik het er wel mee eens dat het het beste is om je aan het "origineel" aspect te houden. Mensen die niet veel ervaring hebben met het web kunnen moeite hebben met de (bijv.) innovatieve text input, dit maakt het gebruiken van je gemaakte website niet fijn voor de gebruikers. Ik denk dat ik zelf tussen de twee wolven zit. Ik wil graag innovatief zijn maar ik hou me wel aan bepaalde "regels" die het web fijn maken voor de gebruikers.
+
+
+
+**Wat heb ik vandaag gedaan:**<br>
+Vandaag heb ik de CSS validatie in mijn code gezet, het formulier gestyled naar de NS huisstijl en sessionStorage code in javascript geschreven.
+
+**Hoelang duurde het:**<br>
+Naast een paar pauzes was ik goed bezig vandaag
+
+**Wat heb ik geleerd:**<br>
+js validatie toepassen in CSS en wat javascriptcode
+
+
+**Wat ga ik morgen doen:**<br>
+sessionStorage checken, extra validatie javascript, progressive disclosure en regular expressions toevoegen
+

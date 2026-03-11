@@ -50,3 +50,23 @@
 // });
 
 // showStep(currentStep);
+
+
+
+// const button = document.querySelector("#checkOverledene");
+// const fieldset = document.querySelector("#gegevens-overledene");
+
+// button.addEventListener("click", () => {
+//   const inputs = fieldset.querySelectorAll("input");
+
+//   for (const input of inputs) {
+//     if (!input.checkValidity()) {
+//       input.reportValidity();
+//       return;
+//     }
+//   }
+
+//   console.log("fieldset valid");
+// });
+
+
