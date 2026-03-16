@@ -5,27 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Erfbelasting formulier</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" type="image/png" href="images/nsicoon.png">
 </head>
 
 
 <body id="top">
     <header>
-        <img src="images/nslogo.svg" alt="">
+
+        <input type="checkbox" id="theme-toggle">
+    
+        <label for="theme-toggle">
+            <svg class="nslogohead" viewBox="-2.04189744 -2.04189744 178.37648488 72.14704288">
+                <path
+                    d="M 76.19003,32.7088 C 72.73763,29.33945 68.00393,27.23954 62.8194,27.23954 L 26.08874,27.23954 L 39.67292,13.61977 L 74.23248,13.61977 C 75.69174,13.6435 77.05609,14.28415 78.01707,15.24513 L 98.07894,35.36632 C 101.53134,38.7238 106.25317,40.83558 111.47329,40.83558 L 148.23955,40.83558 L 134.63165,54.45535 L 100.10767,54.45535 C 98.62468,54.40789 97.28406,53.77911 96.31122,52.78254 L 76.19003,32.7088 z M 86.68959,62.43976 C 90.10639,65.89216 94.85196,68.06325 100.10767,68.06325 L 140.23141,68.06325 L 174.29269,34.03756 L 140.23141,0 L 121.00001,0 L 148.23955,27.23954 L 111.47329,27.23954 C 110.0259,27.23954 108.67351,26.65821 107.7243,25.73282 L 87.6387,5.64723 C 84.19817,2.15924 79.46447,0.01187 74.23248,0 L 34.04952,0 L 0,34.03756 L 34.04952,68.06325 L 53.29268,68.06325 L 26.08874,40.83558 L 62.8194,40.83558 C 64.27866,40.83558 65.59556,41.41691 66.5684,42.36602 L 86.68959,62.43976"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                />
+            </svg>
+        </label>
+    
         <h1>Aangifte erfbelasting</h1>
         <p>Dit is een studenten opdracht!</p>
+    
     </header>
 
     <main>
         <section>
             <form id="erfbelastingForm" action="#">
-                
                 <fieldset>
                     <legend>Gegevens van de overledene</legend>
 
                     <fieldset id="gegevens-overledene" class="step"> 
                     <legend>Persoonsgegevens overledene</legend>
                         <label>
-                            Voorletter(s)
+                            Voorletter(s) <span class="verplicht">(Verplicht)</span>
                             <input type="text" name="voornaam" required>
                         </label>
 
@@ -34,26 +47,23 @@
                             <input type="text" name="tussenvoegsel">
                         </label>
                         <label>
-                            Achternaam
+                            Achternaam <span class="verplicht">(Verplicht)</span>
                             <input type="text" name="achternaam" required>
                         </label>
                         <label>
-                            BSN
+                            BSN <span class="verplicht">(Verplicht, vul de 9 cijfers van uw BSN in)</span>
                             <input type="text" name="bsn" minlength="9" maxlength="9" pattern="[0-9]{9}" required>
                         </label>
                         <label>
-                            Overlijdensdatum
-                            <input type="date" name="overlijdensdatum" min="2025-02-16" max="2026-02-16" required>
+                            Overlijdensdatum <span class="verplicht">(Verplicht, in het jaar 2025)</span>
+                            <input type="date" name="overlijdensdatum" min="2025-01-01" max="2025-12-31" required>
                         </label>
-                        <!-- <button type="button" id="checkOverledene">check</button> -->
-
                     </fieldset>
 
                     <fieldset id="overledene-getrouwd" class="step">
                         <legend>
                             Was de overledene getrouwd of had de overledene een
                             geregistreerde partner op het moment van overlijden?
-                        
                         </legend>
                         <details class="help">
                             <summary></summary>
@@ -74,6 +84,7 @@
                         </details>
 
                         <div class="radioflex">
+                            
                             <label class="radioselect">
                                 Nee
                                 <input type="radio" id="getrouwdnee" name="getrouwd" value="nee" required>
@@ -84,8 +95,6 @@
                                 <input type="radio" id="getrouwdja" name="getrouwd" value="ja">
                             </label>
                         </div>
-
-                    
 
                     </fieldset>
 
@@ -163,15 +172,15 @@
                     <fieldset id="partnerschapsvoorwaarden" class="step">
                         <legend>Datum huwelijkse of partnerschapsvoorwaarden</legend>
                         <label>
-                            Dag
+                            Dag <span class="verplicht">(Verplicht)</span>
                             <input type="number" name="dagpartnerschapsvoorwaarden" minlength="1" maxlength="2" required>
                         </label>
                         <label>
-                            Maand
+                            Maand <span class="verplicht">(Verplicht)</span>
                             <input type="number" name="maandpartnerschapsvoorwaarden" minlength="1" maxlength="2" required>
                         </label>
                         <label>
-                            Jaar
+                            Jaar <span class="verplicht">(Verplicht)</span>
                             <input type="number" name="jaarpartnerschapsvoorwaarden" minlength="4" maxlength="4" required>
                         </label>
                     </fieldset>
@@ -314,12 +323,13 @@
 
                     <fieldset id="gegevens-notaris" class="step">
                         <legend>Gegevens notaris</legend>
+
                         <label>
-                            Protocolnummer
+                            Protocolnummer <span class="verplicht">(Verplicht)</span>
                             <input type="number" name="Protocolnummer" minlength="6" maxlength="6" required>
                         </label>
                         <label>
-                            Voorletter(s)
+                            Voorletter(s) <span class="verplicht">(Verplicht)</span>
                             <input type="text" name="voornaamnotaris" required>
                         </label>
                         <label>
@@ -327,11 +337,11 @@
                             <input type="text" name="tussenvoegselnotaris">
                         </label>
                         <label>
-                            Achternaam
+                            Achternaam <span class="verplicht">(Verplicht)</span>
                             <input type="text" name="achternaamnotaris" required>
                         </label>
                         <label>
-                            Vestiginsplaats
+                            Vestiginsplaats <span class="verplicht">(Verplicht)</span>
                             <input type="text" name="vestiginsplaats" required>
                         </label>
                     </fieldset>
@@ -339,15 +349,15 @@
                     <fieldset id="datum-testament" class="step">
                         <legend>Datum van het testament of van de laatste wijziging</legend>
                         <label>
-                            Dag
+                            Dag <span class="verplicht">(Verplicht)</span>
                             <input type="number" name="dagtestament" minlength="1" maxlength="2" required>
                         </label>
                         <label>
-                            Maand
+                            Maand <span class="verplicht">(Verplicht)</span>
                             <input type="number" name="maandtestament" minlength="1" maxlength="2" required>
                         </label>
                         <label>
-                            Jaar
+                            Jaar <span class="verplicht">(Verplicht)</span>
                             <input type="number" name="jaartestament" minlength="4" maxlength="4" required>
                         </label>
                     </fieldset>

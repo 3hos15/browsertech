@@ -5,28 +5,40 @@
 }
 
 :root {
-    --white-bg: #ffffff;
-    --grey-bg: #f4f4f887;
-    --ns-yellow: #ffc917;
+    color-scheme: light;
+
+    --white-bg:light-dark(#ffffff, #1b2c44);
+    --grey-bg:light-dark(#f4f4f887, #223754);
+    --ns-yellow:light-dark(#ffc917, #c1970e);
     --ns-yellow-hover: #e7b81d;
-    --invalid-input: rgb(155, 41, 41);
-    --ns-blue-text: #003082;
+    --invalid-input: light-dark(#9b2929, #ea3131);
+    --ns-blue-text:light-dark(#003082, #f1f1f1);
     --ns-blue-link:#0063d3;
     --ns-green-progress: #00a888;
-    --ns-darkpurple-infotext: #503fa7;
+    --ns-darkpurple-infotext: light-dark(#503fa7, #a39bc9);
     --ns-darkpurple-infohover: #7e69e3;
-    --ns-darkpurple-bg-border: #7163b738;
-    --ns-darkpurple-bg: #c0b9e433;
-    --ns-darkpurple-bg-bigscreen: #efecff;
+    --ns-darkpurple-bg-border:light-dark(#7163b738, #7163b7bc);
+    --ns-darkpurple-bg: light-dark(#c0b9e433, #4f467bbb);
+    --ns-darkpurple-bg-bigscreen: light-dark(#efecff, #7e72c471);
     --ns-lightpurple-info: #f5f3fe;
     --ns-lightpurple-infoborder:#dcd6fb;
+    --boxshadow: light-dark(#e6e6e6, #1c2f4c);
+    
+
+    &:has(#theme-toggle:checked) {
+        color-scheme: dark;
+    }
 }
 
+#theme-toggle {
+    display: none;
+}
 
 body {
     background-color: var(--grey-bg);
     color: var(--ns-blue-text);
 }
+
 main {
     display: flex;
     justify-content: center;
@@ -57,17 +69,15 @@ header, footer {
 }
 
 header {
-    box-shadow: 0px 3px 3px rgb(230, 230, 230);
+    box-shadow: 0px 3px 3px var(--boxshadow);
     background-color: var(--white-bg);
     position: sticky;
     top: 0;
     z-index: 9999;
     height: 6em;
-
-
 }
 
-img:not(footer img) {
+.nslogohead {
     position: absolute;
     left: 1em;
     top: 1em;;
@@ -90,10 +100,9 @@ img:not(footer img) {
     }
 }
 
-
 footer {
     padding: 1em;
-    box-shadow: 0px -3px 3px rgb(230, 230, 230);
+    box-shadow: 0px -3px 3px var(--boxshadow);
     background-color: var(--white-bg);
 
     img {
@@ -102,9 +111,6 @@ footer {
     }
 }
 
-footer {
-    padding: 1rem;
-}
 
 .nslogo {
     width: 4em;
@@ -158,23 +164,19 @@ fieldset > fieldset{
     legend {
         font-size: 1.1em;
         font-weight: 600;
-        /* background-color: var(--white-bg);
 
-        position: sticky;
-        top: 4.79em;
-
-        z-index: 999; */
         padding-bottom: .5em;
         border-bottom: 3px solid var(--ns-yellow);
 
             @media (max-width: 500px) {
                 font-size: 1em;
             }
-
     }
 }
 
-
+label {
+    cursor: pointer;
+}
 
 label:has(input[type="text"], input[type="number"], input[type="date"]) {
     margin-bottom: .5em;
@@ -226,11 +228,9 @@ input[type="text"], input[type="number"], input[type="date"] {
     justify-content: center;
     align-items: center;
     padding: 0.5rem 1rem;
-    border: 1px solid rgb(160, 160, 160);
+    border: 1px solid #a0a0a0;
     border-radius: 0.5rem;
     cursor: pointer;
-    transition: border-color 200ms, background-color 200ms, color 200ms;
-    user-select: none;
     position: relative;
 
         &:hover {
@@ -269,9 +269,11 @@ input[type="text"], input[type="number"], input[type="date"] {
     gap: .5em;
     align-items: center;
 }
+
 fieldset:has(input[type="radio"]) {
     position: relative;
 }
+
 fieldset:has(input[type="radio"]) legend {
     display: flex;
     align-items: center;
@@ -288,7 +290,6 @@ fieldset:has(input[type="radio"]) details.help summary {
     height: 1.3rem;
     border-radius: 50%;
     background-color: var(--ns-darkpurple-infotext);
-    color: white;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -296,7 +297,7 @@ fieldset:has(input[type="radio"]) details.help summary {
 
     &:hover {
         background-color: var(--ns-darkpurple-infohover);
-        transition: 500ms;
+        transition: 200ms;
     }
 
 }
@@ -304,12 +305,12 @@ fieldset:has(input[type="radio"]) details.help summary {
 fieldset:has(input[type="radio"]) details.help p {
     margin-top: 0.5rem;
 }
+
 .help summary::before {
     content: "?";
 }
 
 .help summary {
-
     list-style: none;
     width: 1.5rem;
     height: 1.5rem;
@@ -327,6 +328,7 @@ fieldset:has(input[type="radio"]) details.help p {
 details span {
     font-weight: 700;
 }
+
 .help p {
     font-size: .9em;
     color: var(--ns-darkpurple-infotext);
@@ -343,17 +345,11 @@ details span {
         top: -2em;
         right: -23em;
     }
-    
-}
-
-
-summary {
-    transition: 500ms;
 }
 
 details[open] summary {
     background-color: var(--ns-green-progress);
-    transform: translateY(18px);
+    transform: translateY(10px);
 
     @media (min-width: 1280px) {
         transform: translateY(0px);
@@ -362,7 +358,6 @@ details[open] summary {
 details[open] summary::before {
     content: "×";
 }
-
 
 button[type="submit"] {
     background-color: var(--ns-yellow);
@@ -375,23 +370,26 @@ button[type="submit"] {
     font-size: 1em;
     cursor: pointer;
     font-weight: 600;
-    transition: background-color 200ms, color 200ms;
-
-
 
         &:hover {
             background-color: var(--ns-yellow-hover);
         }
 
-        &:active {
+        /* &:active {
             background-color: var(--ns-green-progress);
-            box-shadow: 3px 3px 3px rgb(230, 230, 230);
-        }
+        } */
 
         @media (max-width: 500px) {
             width: 100%;
             padding: 0.75em;
         }
+}
+
+.verplicht {
+    /* position: relative;
+    left: 10.8em;
+    top: -1em; */
+    font-size: .7em;
 }
 
 
