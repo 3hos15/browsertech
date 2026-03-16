@@ -70,3 +70,19 @@
 // });
 
 
+const input = document.querySelector('input')
+const error = document.querySelector('.error')
+const form = document.querySelector('form')
+
+input.addEventListener('blur', (event) => {
+    console.log(event)
+
+    if (!input.validity.valid){
+        error.textContent ='Vul een correcte naam in'
+        input.setAttribute('aria-describedby', 'error-id')
+        input.focus()
+    } else {
+        input.removeAttribute('aria-describedby')
+        error.textContent =""
+    }
+})

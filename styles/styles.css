@@ -2,13 +2,19 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
+    font-family: 'nstype', Arial, Helvetica, sans-serif;
 }
+
+@font-face {
+    font-family: 'nstype';
+    src: url('../fonts/nssans-regular.woff2') format('woff2');
+}
+
 
 :root {
     color-scheme: light;
-
-    --white-bg:light-dark(#ffffff, #1b2c44);
-    --grey-bg:light-dark(#f4f4f887, #223754);
+    --white-bg:light-dark(#ffffff, #111d2d);
+    --grey-bg:light-dark(#f4f4f887, #142236);
     --ns-yellow:light-dark(#ffc917, #c1970e);
     --ns-yellow-hover: #e7b81d;
     --invalid-input: light-dark(#9b2929, #ea3131);
@@ -22,9 +28,8 @@
     --ns-darkpurple-bg-bigscreen: light-dark(#efecff, #7e72c471);
     --ns-lightpurple-info: #f5f3fe;
     --ns-lightpurple-infoborder:#dcd6fb;
-    --boxshadow: light-dark(#e6e6e6, #1c2f4c);
+    --boxshadow: light-dark(#e6e6e6, #111e32);
     
-
     &:has(#theme-toggle:checked) {
         color-scheme: dark;
     }
@@ -178,6 +183,9 @@ form > fieldset > legend {
 padding: 0;
 font-size: 1.3em;
 padding: 0.5em 0 1em 1em;
+text-shadow: 
+    0.3px 0 currentColor,
+    -0.3px 0 currentColor;
 
     @media (max-width: 500px) {
         font-size: 1.2em;
@@ -196,10 +204,11 @@ fieldset > fieldset{
 
     legend {
         font-size: 1.1em;
-        font-weight: 600;
-
         padding-bottom: .5em;
         border-bottom: 3px solid var(--ns-yellow);
+        text-shadow: 
+            0.3px 0 currentColor,
+            -0.3px 0 currentColor;
 
             @media (max-width: 500px) {
                 font-size: 1em;
@@ -230,6 +239,7 @@ input[type="text"], input[type="number"], input[type="date"] {
     border: 1px solid rgb(160, 160, 160);
     border-radius: 5px;
     margin-top: .25em;
+    color: var(--ns-blue-text);
 
         &:focus {
             outline: none;
@@ -251,7 +261,7 @@ input[type="text"], input[type="number"], input[type="date"] {
         }
 
         @media (max-width: 500px) {
-            height: 2em;
+            height: 2.3em;
         }
 }
 
@@ -359,7 +369,9 @@ fieldset:has(input[type="radio"]) details.help p {
 }
 
 details span {
-    font-weight: 700;
+    text-shadow: 
+    0.3px 0 currentColor,
+    -0.3px 0 currentColor;
 }
 
 .help p {
@@ -380,6 +392,22 @@ details span {
     }
 }
 
+
+/* https://codepen.io/3hos15/pen/PwGGGRM  code uit workshop van Victor zelf over getypt*/
+.error {
+    color: #ef6565;
+    display: none;
+    font-size: .9em;
+}
+
+label:has(input:user-invalid) .error {
+    display:block;
+}
+
+div:has(input:user-invalid) .error {
+    display: block;
+}
+
 details[open] summary {
     background-color: var(--ns-green-progress);
     transform: translateY(10px);
@@ -392,7 +420,7 @@ details[open] summary::before {
     content: "×";
 }
 
-button[type="submit"] {
+button[type="submit"], .terugform{
     background-color: var(--ns-yellow);
     color: var(--ns-blue-text);
     border: none;
@@ -407,10 +435,6 @@ button[type="submit"] {
         &:hover {
             background-color: var(--ns-yellow-hover);
         }
-
-        /* &:active {
-            background-color: var(--ns-green-progress);
-        } */
 
         @media (max-width: 500px) {
             width: 100%;
@@ -515,6 +539,11 @@ SUMMARY PAGE
         margin: 0.5em 0;
     }
 
+}
+
+
+.terugform {
+    text-decoration: none;
 }
 
 

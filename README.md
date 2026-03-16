@@ -230,3 +230,27 @@ js validatie toepassen in CSS en wat javascriptcode
 **Wat ga ik morgen doen:**<br>
 sessionStorage checken, extra validatie javascript, progressive disclosure en regular expressions toevoegen
 
+---
+### Dag 7 - dinsdag 10 maart
+
+**Wat heb ik vandaag gedaan:**<br>
+**Hoelang duurde het:**<br>
+**Wat heb ik geleerd:**<br>
+**Wat ga ik morgen doen:**<br>
+
+---
+### Dag 9 - maandag 16 maart
+
+**Wat heb ik vandaag gedaan:**<br>
+Validatie in css en deels in javascript gezet in m'n code. Gewerkt aan de styling.
+Voortgangsgesprek ingehaald.
+
+Autocomplete off in html
+En details name attribute toevoegen
+Contrast kleuren in dark mode
+Datalist voor landcode en plaats https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/datalist 
+
+
+**Hoelang duurde het:**<br>
+**Wat heb ik geleerd:**<br>
+**Wat ga ik morgen doen:**<br>

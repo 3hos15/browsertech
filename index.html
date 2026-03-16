@@ -26,7 +26,8 @@
     
         <h1>Aangifte erfbelasting</h1>
         <p>Dit is een studenten project!</p>
-        <img class="nsster" src="images/erficoon.png" alt="">
+
+        <a href="samenvatting.html"> <img class="nsster" src="images/erficoon.png" alt=""></a>
     </header>
 
     <main>
@@ -40,6 +41,7 @@
                         <label>
                             Voorletter(s) <span class="verplicht">(Verplicht)</span>
                             <input type="text" name="voornaam" required>
+                            <p class="error">Vul uw voorletters in</p>
                         </label>
 
                         <label>
@@ -49,14 +51,17 @@
                         <label>
                             Achternaam <span class="verplicht">(Verplicht)</span>
                             <input type="text" name="achternaam" required>
+                            <p class="error">Vul uw achternaam in</p>
                         </label>
                         <label>
                             BSN <span class="verplicht">(Verplicht, vul de 9 cijfers van uw BSN in)</span>
                             <input type="text" name="bsn" minlength="9" maxlength="9" pattern="[0-9]{9}" required>
+                            <p class="error">Vul een geldig BSN in (9 cijfers)</p>
                         </label>
                         <label>
                             Overlijdensdatum <span class="verplicht">(Verplicht, in het jaar 2025)</span>
                             <input type="date" name="overlijdensdatum" min="2025-01-01" max="2025-12-31" required>
+                            <p class="error">Kies de overlijdensdatum</p>
                         </label>
                     </fieldset>
 
@@ -65,7 +70,7 @@
                             Was de overledene getrouwd of had de overledene een
                             geregistreerde partner op het moment van overlijden?
                         </legend>
-                        <details class="help">
+                        <details name="help" class="help">
                             <summary></summary>
                             <p>Is er geen testament? En had de overledene een echtgenoot
                                 of geregistreerde partner en kinderen? Dan gaat de hele
@@ -83,7 +88,7 @@
                                 partnerschapsvoorwaarden zijn altijd in een notariële aktevastgelegd.</p>
                         </details>
 
-                        <div class="radioflex">
+                        <div class="radioflex" required>
                             
                             <label class="radioselect">
                                 Nee
@@ -94,6 +99,8 @@
                                 Ja
                                 <input type="radio" id="getrouwdja" name="getrouwd" value="ja">
                             </label>
+                            <p class="error">Kies een optie</p>
+
                         </div>
 
                     </fieldset>
@@ -104,7 +111,7 @@
                             laten vastleggen in een notariële akte?
                         </legend>
 
-                        <details class="help">
+                        <details name="help" class="help">
                             <summary></summary>
                             <p>Is er geen testament? En had de overledene een echtgenoot
                                 of geregistreerde partner en kinderen? Dan gaat de hele
@@ -132,13 +139,14 @@
                                 Ja
                                 <input type="radio" id="akteja" name="akte" value="ja">
                             </label>
+                            <p class="error">Kies een optie</p>
                         </div>
                     </fieldset>
 
                     <fieldset id="overledene-verrekenbeding" class="step">
                         <legend>Hadden de overledene en diens partner een finaal verrekenbeding?</legend>
 
-                        <details class="help">
+                        <details name="help" class="help">
                             <summary></summary>
                             <p>Is er geen testament? En had de overledene een echtgenoot
                                 of geregistreerde partner en kinderen? Dan gaat de hele
@@ -166,6 +174,7 @@
                                 Ja
                                 <input type="radio" id="verrekenbedingja" name="verrekenbeding" value="ja">
                             </label>
+                            <p class="error">Kies een optie</p>
                         </div>
                     </fieldset>
 
@@ -174,21 +183,24 @@
                         <label>
                             Dag <span class="verplicht">(Verplicht)</span>
                             <input type="number" name="dagpartnerschapsvoorwaarden" minlength="1" maxlength="2" required>
+                            <p class="error">Vul de dag van het huwelijkse of partnerschapsvoorwaarden in</p>
                         </label>
                         <label>
                             Maand <span class="verplicht">(Verplicht)</span>
                             <input type="number" name="maandpartnerschapsvoorwaarden" minlength="1" maxlength="2" required>
+                            <p class="error">Vul de maand van het huwelijkse of partnerschapsvoorwaarden in</p>
                         </label>
                         <label>
                             Jaar <span class="verplicht">(Verplicht)</span>
                             <input type="number" name="jaarpartnerschapsvoorwaarden" minlength="4" maxlength="4" required>
+                            <p class="error">Vul het jaar van het huwelijkse of partnerschapsvoorwaarden in</p>
                         </label>
                     </fieldset>
 
                     <fieldset id="overledene-kinderen" class="step">
                         <legend>Had de overledene kinderen?</legend>
 
-                        <details class="help">
+                        <details name="help" class="help">
                             <summary></summary>
                             <p>Is er geen testament? En had de overledene een echtgenoot
                                 of geregistreerde partner en kinderen? Dan gaat de hele
@@ -216,13 +228,14 @@
                                 Ja
                                 <input type="radio" id="kinderenja" name="kinderen" value="ja">
                             </label>
+                            <p class="error">Kies een optie</p>
                         </div>
                     </fieldset>
 
                     <fieldset id="kinderen-overleden" class="step">
                         <legend>Is 1 van deze kinderen eerder overleden dan de overledene voor wie u nu aangifte doet?</legend>
 
-                        <details class="help">
+                        <details name="help" class="help">
                             <summary></summary>
                             <p>Is er geen testament? En had de overledene een echtgenoot
                                 of geregistreerde partner en kinderen? Dan gaat de hele
@@ -250,13 +263,14 @@
                                 Ja
                                 <input type="radio" id="eerderoverledenja" name="eerderoverleden" value="ja">
                             </label>
+                            <p class="error">Kies een optie</p>
                         </div>
                     </fieldset>
 
                     <fieldset id="kinderen-kind" class="step">
                         <legend>Had dit overleden kind zelf kinderen?</legend>
 
-                        <details class="help">
+                        <details name="help" class="help">
                             <summary></summary>
                             <p>Is er geen testament? En had de overledene een echtgenoot
                                 of geregistreerde partner en kinderen? Dan gaat de hele
@@ -284,13 +298,14 @@
                                 Ja
                                 <input type="radio" id="kindkindja" name="kindkind" value="ja">
                             </label>
+                            <p class="error">Kies een optie</p>
                         </div>
                     </fieldset>
 
                     <fieldset id="overledene-testament" class="step">
                         <legend>Had de overledene een testament?</legend>
 
-                        <details class="help">
+                        <details name="help" class="help">
                             <summary></summary>
                             <p>Is er geen testament? En had de overledene een echtgenoot
                                 of geregistreerde partner en kinderen? Dan gaat de hele
@@ -309,16 +324,17 @@
                         </details>
 
                         <div class="radioflex">
-                        <label class="radioselect">
-                            Nee. Ga verder met vraag 2.
-                            <input type="radio" id="testamentnee" name="testament" value="nee" required>
-                        </label>
+                            <label class="radioselect">
+                                Nee
+                                <input type="radio" id="testamentnee" name="testament" value="nee" required>
+                            </label>
 
-                        <label class="radioselect">
-                            Ja
-                            <input type="radio" id="testamentja" name="testament" value="ja">
-                        </label>
-                    </div>
+                            <label class="radioselect">
+                                Ja
+                                <input type="radio" id="testamentja" name="testament" value="ja">
+                            </label>
+                            <p class="error">Kies een optie</p>
+                        </div>
                     </fieldset>
 
                     <fieldset id="gegevens-notaris" class="step">
@@ -327,10 +343,12 @@
                         <label>
                             Protocolnummer <span class="verplicht">(Verplicht)</span>
                             <input type="number" name="Protocolnummer" minlength="6" maxlength="6" required>
+                            <p class="error">Vul het protocolnummer van de notaris in</p>
                         </label>
                         <label>
                             Voorletter(s) <span class="verplicht">(Verplicht)</span>
                             <input type="text" name="voornaamnotaris" required>
+                            <p class="error">Vul de voorletter(s) van de notaris in</p>
                         </label>
                         <label>
                             Tussenvoegsel(s)
@@ -339,10 +357,12 @@
                         <label>
                             Achternaam <span class="verplicht">(Verplicht)</span>
                             <input type="text" name="achternaamnotaris" required>
+                            <p class="error">Vul de achternaam van de notaris in</p>
                         </label>
                         <label>
                             Vestiginsplaats <span class="verplicht">(Verplicht)</span>
                             <input type="text" name="vestiginsplaats" required>
+                            <p class="error">Vul de vestiginsplaats van de notaris in</p>
                         </label>
                     </fieldset>
 
@@ -350,15 +370,18 @@
                         <legend>Datum van het testament of van de laatste wijziging</legend>
                         <label>
                             Dag <span class="verplicht">(Verplicht)</span>
-                            <input type="number" name="dagtestament" minlength="1" maxlength="2" required>
+                            <input type="number" name="dagtestament" minlength="1" maxlength="2" pattern="[0-9]{2}" required>
+                            <p class="error">Vul de dag van het testament of van de laatste wijziging in</p>
                         </label>
                         <label>
                             Maand <span class="verplicht">(Verplicht)</span>
-                            <input type="number" name="maandtestament" minlength="1" maxlength="2" required>
+                            <input type="number" name="maandtestament" minlength="1" maxlength="2" pattern="[0-9]{2}" required>
+                            <p class="error">Vul de maand van het testament of van de laatste wijziging in</p>
                         </label>
                         <label>
                             Jaar <span class="verplicht">(Verplicht)</span>
-                            <input type="number" name="jaartestament" minlength="4" maxlength="4" required>
+                            <input type="number" name="jaartestament" minlength="4" maxlength="4" pattern="[0-9]{4}" required>
+                            <p class="error">Vul het jaar van het testament of van de laatste wijziging in</p>
                         </label>
                     </fieldset>
                     <button type="submit">Verstuur</button>
@@ -371,7 +394,7 @@
             <a href="#top" aria-label="Back to top">
                 <svg class="nslogo" viewBox="-2.04189744 -2.04189744 178.37648488 72.14704288">
                     <path
-                  d="M 76.19003,32.7088 C 72.73763,29.33945 68.00393,27.23954 62.8194,27.23954 L 26.08874,27.23954 L 39.67292,13.61977 L 74.23248,13.61977 C 75.69174,13.6435 77.05609,14.28415 78.01707,15.24513 L 98.07894,35.36632 C 101.53134,38.7238 106.25317,40.83558 111.47329,40.83558 L 148.23955,40.83558 L 134.63165,54.45535 L 100.10767,54.45535 C 98.62468,54.40789 97.28406,53.77911 96.31122,52.78254 L 76.19003,32.7088 z M 86.68959,62.43976 C 90.10639,65.89216 94.85196,68.06325 100.10767,68.06325 L 140.23141,68.06325 L 174.29269,34.03756 L 140.23141,0 L 121.00001,0 L 148.23955,27.23954 L 111.47329,27.23954 C 110.0259,27.23954 108.67351,26.65821 107.7243,25.73282 L 87.6387,5.64723 C 84.19817,2.15924 79.46447,0.01187 74.23248,0 L 34.04952,0 L 0,34.03756 L 34.04952,68.06325 L 53.29268,68.06325 L 26.08874,40.83558 L 62.8194,40.83558 C 64.27866,40.83558 65.59556,41.41691 66.5684,42.36602 L 86.    68959,62.43976"
+                    d="M 76.19003,32.7088 C 72.73763,29.33945 68.00393,27.23954 62.8194,27.23954 L 26.08874,27.23954 L 39.67292,13.61977 L 74.23248,13.61977 C 75.69174,13.6435 77.05609,14.28415 78.01707,15.24513 L 98.07894,35.36632 C 101.53134,38.7238 106.25317,40.83558 111.47329,40.83558 L 148.23955,40.83558 L 134.63165,54.45535 L 100.10767,54.45535 C 98.62468,54.40789 97.28406,53.77911 96.31122,52.78254 L 76.19003,32.7088 z M 86.68959,62.43976 C 90.10639,65.89216 94.85196,68.06325 100.10767,68.06325 L 140.23141,68.06325 L 174.29269,34.03756 L 140.23141,0 L 121.00001,0 L 148.23955,27.23954 L 111.47329,27.23954 C 110.0259,27.23954 108.67351,26.65821 107.7243,25.73282 L 87.6387,5.64723 C 84.19817,2.15924 79.46447,0.01187 74.23248,0 L 34.04952,0 L 0,34.03756 L 34.04952,68.06325 L 53.29268,68.06325 L 26.08874,40.83558 L 62.8194,40.83558 C 64.27866,40.83558 65.59556,41.41691 66.5684,42.36602 L 86.    68959,62.43976"
                         fill="currentColor"
                         fill-rule="evenodd"
                         />

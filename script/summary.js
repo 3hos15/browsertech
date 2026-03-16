@@ -1,5 +1,7 @@
 const container = document.getElementById("summaryContent");
 const data = JSON.parse(sessionStorage.getItem("erfbelastingData"));
+// const data = JSON.parse(localStorage.getItem("erfbelastingData"));
+
 
 function createSection(title, obj) {
     const section = document.createElement("section");
