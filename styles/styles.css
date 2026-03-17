@@ -41,6 +41,10 @@
     display: none;
 }
 
+header input[type="checkbox"] {
+    display: none;
+}
+
 body {
     background-color: var(--grey-bg);
     color: var(--ns-blue-text);
