@@ -356,6 +356,42 @@
                         </div>
                     </fieldset>
 
+                    <fieldset id="datum-testament" class="step">
+                        <legend>Datum van het testament of van de laatste wijziging</legend>
+                        <label>
+                            Dag <span class="verplicht">(Verplicht, cijfers 1-31)</span>
+                                <input 
+                                type="text" 
+                                name="dagtestament" 
+                                pattern="^(0?[1-9]|[12][0-9]|3[01])$" 
+                                maxlength="2" 
+                                required>
+                                <p class="error">Vul de cijfers van de dag van het testament of van de laatste wijziging in, tussen 1-31</p>
+                            </label>
+                            
+                            <label>
+                                Maand <span class="verplicht">(Verplicht, cijfers 1-12)</span>
+                                <input 
+                                type="text" 
+                                name="maandtestament" 
+                                pattern="^(0?[1-9]|1[0-2])$" 
+                                maxlength="2" 
+                                required>
+                                <p class="error">Vul de cijfers van de maand van het testament of van de laatste wijziging in, tussen 1-12</p>
+                            </label>
+                            
+                            <label>
+                                Jaar <span class="verplicht">(Verplicht)</span>
+                                <input 
+                                type="text" 
+                                name="jaartestament" 
+                                pattern="^\d{4}$" 
+                                maxlength="4" 
+                                required>
+                                <p class="error">Vul een geldig jaartal van het testament of van de laatste wijziging in </p>
+                            </label>
+                    </fieldset>
+
                     <fieldset id="gegevens-notaris" class="step">
                         <legend>Gegevens notaris</legend>
 
@@ -419,42 +455,6 @@
                         </datalist>
                         </label>
 
-                    </fieldset>
-
-                    <fieldset id="datum-testament" class="step">
-                        <legend>Datum van het testament of van de laatste wijziging</legend>
-                        <label>
-                            Dag <span class="verplicht">(Verplicht, cijfers 1-31)</span>
-                                <input 
-                                type="text" 
-                                name="dagtestament" 
-                                pattern="^(0?[1-9]|[12][0-9]|3[01])$" 
-                                maxlength="2" 
-                                required>
-                                <p class="error">Vul de cijfers van de dag van het testament of van de laatste wijziging in, tussen 1-31</p>
-                            </label>
-                            
-                            <label>
-                                Maand <span class="verplicht">(Verplicht, cijfers 1-12)</span>
-                                <input 
-                                type="text" 
-                                name="maandtestament" 
-                                pattern="^(0?[1-9]|1[0-2])$" 
-                                maxlength="2" 
-                                required>
-                                <p class="error">Vul de cijfers van de maand van het testament of van de laatste wijziging in, tussen 1-12</p>
-                            </label>
-                            
-                            <label>
-                                Jaar <span class="verplicht">(Verplicht)</span>
-                                <input 
-                                type="text" 
-                                name="jaartestament" 
-                                pattern="^\d{4}$" 
-                                maxlength="4" 
-                                required>
-                                <p class="error">Vul een geldig jaartal van het testament of van de laatste wijziging in </p>
-                            </label>
                     </fieldset>
                     <button type="submit">Verstuur</button>
             </form>
