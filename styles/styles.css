@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'nstype';
+    src: url('../fonts/nssans-regular.woff2') format('woff2');
+}
+
 * {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
@@ -5,16 +10,13 @@
     font-family: 'nstype', Arial, Helvetica, sans-serif;
 }
 
-@font-face {
-    font-family: 'nstype';
-    src: url('../fonts/nssans-regular.woff2') format('woff2');
-}
-
-
 :root {
     color-scheme: light;
     --white-bg:light-dark(#ffffff, #111d2d);
+    --white-bg-print:light-dark(#ffffffea, #111d2dc0);
     --grey-bg:light-dark(#f4f4f887, #142236);
+    --print-button:light-dark(#003082, #0063d3);
+    --print-button-hover:light-dark(#0063d3, #003082);
     --ns-yellow:light-dark(#ffc917, #c1970e);
     --ns-yellow-hover: #e7b81d;
     --invalid-input: light-dark(#9b2929, #ea3131);
@@ -30,18 +32,19 @@
     --ns-lightpurple-infoborder:#dcd6fb;
     --boxshadow: light-dark(#e6e6e6, #111e32);
     
-    &:has(#theme-toggle:checked) {
+    &:has(#theme:checked) {
         color-scheme: dark;
     }
 }
 
-#theme-toggle {
+#theme {
     display: none;
 }
 
 body {
     background-color: var(--grey-bg);
     color: var(--ns-blue-text);
+    overflow-x: clip;
 }
 
 main {
@@ -138,7 +141,7 @@ footer {
 footer img {
     width: 10em;
     position: absolute;
-    right: 1em;
+    right: -20em;
     transition: 2s;
 
     @media (max-width: 500px) {
@@ -206,9 +209,10 @@ fieldset > fieldset{
         font-size: 1.1em;
         padding-bottom: .5em;
         border-bottom: 3px solid var(--ns-yellow);
+        border-bottom-right-radius: 3px;
         text-shadow: 
-            0.3px 0 currentColor,
-            -0.3px 0 currentColor;
+            0.3px 0 inherit,
+            -0.3px 0 inherit;
 
             @media (max-width: 500px) {
                 font-size: 1em;
@@ -220,7 +224,7 @@ label {
     cursor: pointer;
 }
 
-label:has(input[type="text"], input[type="number"], input[type="date"]) {
+label:has(input[type="text"], input[type="number"], input[type="date"], label:has(datalist)) {
     margin-bottom: .5em;
     display: flex;
     flex-direction: column;
@@ -231,7 +235,12 @@ label:has(input[type="text"], input[type="number"], input[type="date"]) {
     }
 }
 
-input[type="text"], input[type="number"], input[type="date"] {
+
+input[type="text"]:not(.voornaam), input[type="number"], label:has(datalist) input {
+    text-transform: capitalize;
+}
+
+input[type="text"], input[type="number"], input[type="date"], label:has(datalist) input {
     appearance: none;
     width: min(100%, 44em);
     height: 3em;
@@ -240,6 +249,7 @@ input[type="text"], input[type="number"], input[type="date"] {
     border-radius: 5px;
     margin-top: .25em;
     color: var(--ns-blue-text);
+
 
         &:focus {
             outline: none;
@@ -370,8 +380,8 @@ fieldset:has(input[type="radio"]) details.help p {
 
 details span {
     text-shadow: 
-    0.3px 0 currentColor,
-    -0.3px 0 currentColor;
+    0.3px 0 inherit,
+    -0.3px 0 inherit;
 }
 
 .help p {
@@ -397,7 +407,8 @@ details span {
 .error {
     color: #ef6565;
     display: none;
-    font-size: .9em;
+    font-size: .8em;
+    margin-top: .3em;
 }
 
 label:has(input:user-invalid) .error {
@@ -420,7 +431,7 @@ details[open] summary::before {
     content: "×";
 }
 
-button[type="submit"], .terugform{
+button[type="submit"], .terugform, .print{
     background-color: var(--ns-yellow);
     color: var(--ns-blue-text);
     border: none;
@@ -432,7 +443,7 @@ button[type="submit"], .terugform{
     cursor: pointer;
     font-weight: 600;
 
-        &:hover {
+        &:hover:not(.print) {
             background-color: var(--ns-yellow-hover);
         }
 
@@ -442,13 +453,24 @@ button[type="submit"], .terugform{
         }
 }
 
+.print {
+    background-color: var(--print-button);
+    color: white;
+}
+
+.print:hover {
+    background-color: var(--print-button-hover);
+
+}
+
 .verplicht {
-    /* position: relative;
-    left: 10.8em;
-    top: -1em; */
     font-size: .7em;
 }
 
+.voornaam, input[type="date"] {
+    text-transform: uppercase;
+
+}
 
 /* 
 .step {
@@ -530,15 +552,63 @@ SUMMARY PAGE
         justify-content: center;
     }
 
-    section {
+
+    #summary {
         margin-bottom: 1em;
         max-width: 40em;
+        padding: em;
+    }
+    section {
+        margin-top: 1em;
+        margin-bottom: 2em;
+        background-color: var(--white-bg);
+        padding: .5em;
+        border-radius: 20px;
+    }
+    h2 {
+        font-size: 1.5em;
+        padding: 0;
+        margin: .5em 0 0 0;
+
+        @media (max-width: 500px) {
+            font-size: 1.3em;
+        }
     }
 
     p {
         margin: 0.5em 0;
     }
 
+
+    @media print {
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    
+        body > * {
+            display: none;
+        }
+    
+        section {
+            background-color: var(--white-bg-print);
+        }
+
+        #summaryContent, #summaryContent * {
+            display: block;
+        }
+    
+        a, button {
+            display: none;
+        }
+    
+        #summaryContent {
+            background-image: url("../images/nstrein.png");
+            background-repeat: repeat;
+            background-size: 2em 2em;
+            padding: 1.25em;
+        }
+    }
 }
 
 

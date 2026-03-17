@@ -254,3 +254,16 @@ Datalist voor landcode en plaats https://developer.mozilla.org/en-US/docs/Web/HT
 **Hoelang duurde het:**<br>
 **Wat heb ik geleerd:**<br>
 **Wat ga ik morgen doen:**<br>
+
+
+
+# Bronnen
+
+https://chatgpt.com/share/69b9227c-2694-8002-90d8-36253e97aa42
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/datalist
+
+https://stackoverflow.com/questions/23728626/localstorage-and-json-stringify-json-parse
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse
+
+

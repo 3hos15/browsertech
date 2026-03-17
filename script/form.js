@@ -7,7 +7,7 @@ form.addEventListener("submit", function(e) {
 const data = {
     overledene: {
         "Voornaam": form.querySelector("input[name='voornaam']").value,
-        "Tussenvoegsel": form.querySelector("input[name='tussenvoegsel']").value,
+        "Tussenvoegsel(s)": form.querySelector("input[name='tussenvoegsel']").value,
         "Achternaam": form.querySelector("input[name='achternaam']").value,
         "BSN": form.querySelector("input[name='bsn']").value,
         "Overlijdensdatum": form.querySelector("input[name='overlijdensdatum']").value
@@ -27,28 +27,27 @@ const data = {
 
     kinderen: {
         "Had de overledene kinderen?": form.querySelector("input[name='kinderen']:checked")?.value || "",
-        eerderoverleden: form.querySelector("input[name='eerderoverleden']:checked")?.value || "",
-        kindkind: form.querySelector("input[name='kindkind']:checked")?.value || ""
+        "Is 1 van deze kinderen eerder overleden dan de overledene voor wie u nu aangifte doet?": form.querySelector("input[name='eerderoverleden']:checked")?.value || "",
+        "Had dit overleden kind zelf kinderen?": form.querySelector("input[name='kindkind']:checked")?.value || ""
     },
 
     testament: {
-        testament: form.querySelector("input[name='testament']:checked")?.value || "",
-        dag: form.querySelector("input[name='dagtestament']").value,
-        maand: form.querySelector("input[name='maandtestament']").value,
-        jaar: form.querySelector("input[name='jaartestament']").value
+        "Had de overledene een testament?": form.querySelector("input[name='testament']:checked")?.value || "",
+        "Dag": form.querySelector("input[name='dagtestament']").value,
+        "Maand": form.querySelector("input[name='maandtestament']").value,
+        "Jaar": form.querySelector("input[name='jaartestament']").value
     },
 
     notaris: {
-        protocolnummer: form.querySelector("input[name='Protocolnummer']").value,
-        voornaam: form.querySelector("input[name='voornaamnotaris']").value,
-        tussenvoegsel: form.querySelector("input[name='tussenvoegselnotaris']").value,
-        achternaam: form.querySelector("input[name='achternaamnotaris']").value,
-        vestigingsplaats: form.querySelector("input[name='vestiginsplaats']").value
-    }
+        "Protocolnummer": form.querySelector("input[name='Protocolnummer']").value,
+        "Voornaam": form.querySelector("input[name='voornaamnotaris']").value,
+        "Tussenvoegsel(s)": form.querySelector("input[name='tussenvoegselnotaris']").value,
+        "Achternaam": form.querySelector("input[name='achternaamnotaris']").value,
+        "Vestigingsplaats": form.querySelector("input[name='steden-lijst']")?.value || ""    }
 };
 
-sessionStorage.setItem("erfbelastingData", JSON.stringify(data));
-    // localStorage.setItem("erfbelastingData", JSON.stringify(data));
+// sessionStorage.setItem("erfbelastingData", JSON.stringify(data));
+localStorage.setItem("erfbelastingData", JSON.stringify(data));
     window.location.href = "samenvatting.html";
 });
 }
