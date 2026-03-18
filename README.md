@@ -140,11 +140,36 @@ Valideren met javascript
 **Wat ga ik morgen doen:**
 
 ---
+### reflectie week 4
 
-### week 5
+In week 4 lag de focus vooral op validatie, interactie en het verdiepen van mijn begrip van hoe formulieren daadwerkelijk werken voor de gebruiker. Waar ik in de vorige week vooral bezig was met structuur en opbouw, ben ik deze week meer de diepte ingegaan met functionaliteit en gedrag van formuliervelden.
+
+Aan het begin van de week leerde ik hoe je met alleen HTML en CSS al een groot deel van validatie kunt afvangen. Dit vond ik interessant, omdat ik eerder dacht dat validatie vrijwel altijd via JavaScript moest gebeuren. Door deze workshop kreeg ik beter inzicht in hoe browsers standaard validatie ondersteunen en hoe je dit kunt versterken met CSS. Dit zorgde ervoor dat ik anders ging kijken naar mijn formulier: eerst nadenken wat er “gratis” kan met HTML/CSS, en pas daarna JavaScript toevoegen als dat echt nodig is.
+
+Tijdens de Weekly Geek ben ik samen met mijn groepje dieper ingegaan op custom checkboxes en radio buttons. Dit was leerzaam, maar ook uitdagend. Vooral het namaken van standaard browsergedrag met divs en spans maakte duidelijk hoeveel functionaliteit er eigenlijk al in native HTML-elementen zit. Dingen zoals focus states, keyboard navigatie (tab en spatie) en toegankelijkheid moet je allemaal zelf opnieuw implementeren als je afwijkt van de standaard. Dit gaf mij een beter besef van wanneer het wel of niet slim is om iets volledig custom te bouwen.
+
+De JavaScript-validatie vond ik het lastigste onderdeel van deze week. Het begrijpen van events zoals blur en het correct gebruiken van setCustomValidity() kostte me tijd. Ook merkte ik dat kleine fouten, zoals het niet resetten van de custom validity, ervoor kunnen zorgen dat een formulier niet meer werkt zoals verwacht. Tegelijkertijd was dit juist leerzaam, omdat ik hierdoor beter begrijp hoe form validation onder water werkt. Het besef dat je altijd moet nadenken over wat er gebeurt als JavaScript uitstaat, vond ik ook een belangrijk inzicht.
+
+Daarnaast werd er aandacht besteed aan toegankelijkheid, bijvoorbeeld met het gebruik van aria-live. Dit liet me zien dat foutmeldingen niet alleen visueel duidelijk moeten zijn, maar ook goed gecommuniceerd moeten worden naar screenreaders. Ik merk dat ik hier nog bewuster in kan worden, omdat ik nu vaak nog vooral visueel denk.
+
+Wat deze week ook opviel, is dat ik soms vastliep op complexere JavaScript-logica, zoals bij de radio buttons. In plaats van te lang zelf te blijven proberen, had ik eerder hulp kunnen vragen of gerichter documentatie kunnen gebruiken. Dit neem ik mee als verbeterpunt: efficiënter omgaan met vastlopen.
+
+Al met al heb ik deze week geleerd dat er een duidelijke opbouw zit in het ontwikkelen van formulieren: eerst structuur (HTML), daarna presentatie (CSS), en vervolgens gedrag (JavaScript). Ook heb ik beter inzicht gekregen in de afweging tussen gebruiksvriendelijkheid, toegankelijkheid en technische complexiteit.
+
+Voor volgende week wil ik:
+
+Meer oefenen met JavaScript zodat ik zekerder word in het toepassen van validatie
+
+Eerder testen of mijn formulier goed werkt zonder JavaScript
+
+Meer aandacht besteden aan accessibility vanaf het begin, in plaats van achteraf
+
+Bewuster kiezen wanneer ik native HTML gebruik en wanneer ik iets custom bouw
+
+Deze week voelde soms uitdagend, maar juist daardoor heb ik veel geleerd en beter inzicht gekregen in hoe alles samenkomt in een goed werkend formulier.
 
 ---
-
+### week 5
 ### Dag 6 - maandag 9 maart
 
 **Workshop van Victor** <br>
@@ -239,6 +264,37 @@ sessionStorage checken, extra validatie javascript, progressive disclosure en re
 **Wat ga ik morgen doen:**<br>
 
 ---
+
+### reflectie week 5
+
+In week 5 heb ik verder gebouwd op de kennis van validatie en formulieren, maar lag de nadruk nog meer op toegankelijkheid, gebruikerservaring en het maken van bewuste ontwerpkeuzes. Waar ik in week 4 vooral bezig was met hoe iets technisch werkt, ben ik deze week meer gaan nadenken over waarom je bepaalde keuzes maakt en wat dat betekent voor de gebruiker.
+
+Tijdens de workshop van Victor heb ik mijn kennis over validatie verder verdiept. Begrippen zoals aria-live="polite" en aria-describedby maakten duidelijk dat validatie niet alleen visueel moet werken, maar ook goed moet communiceren met hulpmiddelen zoals screenreaders. Dit gaf mij een beter inzicht in accessibility: het gaat niet alleen om of iets werkt, maar of het voor iedereen begrijpelijk en bruikbaar is. Ik merk dat dit nog een aandachtspunt voor mij is, omdat ik van nature meer visueel denk.
+
+Daarnaast heb ik gewerkt aan het implementeren van CSS-validatie, JavaScript-validatie en sessionStorage in mijn formulier. Het combineren van deze technieken vond ik soms uitdagend, omdat je moet nadenken over hoe ze elkaar aanvullen zonder elkaar te breken. Vooral het werken met sessionStorage gaf me inzicht in hoe je gebruikersdata tijdelijk kunt opslaan om de ervaring te verbeteren, bijvoorbeeld door ingevulde velden te onthouden.
+
+Een interessant technisch probleem waar ik tegenaan liep, was het gebruik van input type="date". Ik wilde graag alleen het jaar aanpassen in de value (bijvoorbeeld dd/mm/2026), maar dit bleek niet mogelijk binnen de standaard functionaliteit van HTML. De tip van Vasilis om eventueel een custom input te maken met JavaScript liet mij zien dat je soms buiten de standaard moet denken als iets niet direct ondersteund wordt. Tegelijkertijd liet dit mij ook opnieuw nadenken over de afweging tussen custom oplossingen en standaard HTML: een custom input geeft meer controle, maar kost ook meer werk en kan impact hebben op toegankelijkheid.
+
+De Weekly Geek van deze week gaf een meer theoretische, maar waardevolle kijk op designkeuzes. De metafoor van de twee wolven — de gebruiker en de designer — maakte het spanningsveld tussen usability en innovatie duidelijk. Ik herkende mezelf hier deels in: ik vind het leuk om nieuwe en unieke dingen te maken, maar zie nu ook beter dat het niet altijd beter is om af te wijken van bestaande conventies. Vooral het voorbeeld van placeholders als vervanging van labels vond ik sterk, omdat ik dit zelf ook wel eens als “mooier” zag, terwijl het eigenlijk voor verwarring kan zorgen.
+
+Wat ik meeneem uit deze week, is dat goede UX vaak zit in het respecteren van wat al werkt. Innovatie is niet per se iets compleet nieuws bedenken, maar juist het verbeteren van bestaande patronen zonder de gebruiker in de war te maken. Dit heeft mijn kijk op design veranderd: ik wil nog steeds creatief zijn, maar wel met meer aandacht voor gebruiksvriendelijkheid en toegankelijkheid.
+
+Wat beter kon deze week, is dat ik soms veel tijd kwijt was aan technische details, zoals JavaScript en validatie, waardoor ik minder tijd had om te testen met echte gebruikers of feedback te vragen. Ook merkte ik dat ik soms te lang bleef hangen in één oplossing, terwijl er misschien simpelere alternatieven waren.
+
+Voor volgende week wil ik:
+
+Meer balans vinden tussen techniek en gebruikerstesten
+
+Sneller keuzes maken tussen native oplossingen en custom builds
+
+Mijn JavaScript verder verbeteren zodat ik minder vastloop
+
+Accessibility vanaf het begin meenemen in mijn ontwerpkeuzes
+
+Deze week voelde productief en leerzaam, vooral omdat ik niet alleen technisch ben gegroeid, maar ook bewuster ben gaan nadenken over de rol van een developer/designer en de impact van mijn keuzes op de eindgebruiker.
+
+---
+### week 6
 ### Dag 9 - maandag 16 maart
 
 **Wat heb ik vandaag gedaan:**<br>
@@ -252,8 +308,50 @@ Datalist voor landcode en plaats https://developer.mozilla.org/en-US/docs/Web/HT
 
 
 **Hoelang duurde het:**<br>
+hele dag
+
 **Wat heb ik geleerd:**<br>
+over datalists toepassen
+
 **Wat ga ik morgen doen:**<br>
+BT afmaken, kijken of ik kan valideren met JS en de localStorage problemen oplossen en dingen van het voortgangsgesprek aanpassen/toepassen
+
+---
+
+### dag 10 - dinsdag 17 maart
+
+**Wat heb ik vandaag gedaan:**<br>
+Vandaag heb ik de BT opdracht afgerond. Ik heb alle problemen opgelost die er nog waren en ook staat deze nu online via Github.
+**Hoelang duurde het:**<br>
+De hele dag, geen workshops vandaag
+**Wat heb ik geleerd:**<br>
+-
+**Wat ga ik morgen doen:**<br>
+Verder werken aan de CSS opdracht
+
+---
+
+### reflectie week 6
+
+In week 6 lag de focus vooral op het afronden en verfijnen van mijn formulier, waarbij ik verschillende onderdelen samenbracht: validatie, styling, opslag van data en gebruiksvriendelijkheid. In tegenstelling tot de vorige weken, waarin ik vooral nieuwe concepten leerde, stond deze week meer in het teken van toepassen, oplossen van problemen en het verbeteren van bestaande onderdelen.
+
+Aan het begin van de week heb ik verder gewerkt aan validatie, zowel met CSS als JavaScript. Ik merk dat ik hier steeds meer grip op krijg, vooral in hoe deze twee elkaar kunnen aanvullen. CSS kan veel visuele feedback geven, terwijl JavaScript nodig is voor complexere logica. Toch blijft het soms lastig om overzicht te houden wanneer beide door elkaar lopen, wat mij laat zien dat structuur in mijn code steeds belangrijker wordt naarmate een project groeit.
+
+Een nieuw onderdeel dat ik deze week heb toegepast, is het gebruik van de datalist. Dit vond ik een interessante toevoeging, omdat het een relatief eenvoudige manier is om gebruikers te helpen met invoer, zonder dat je meteen een volledig custom component hoeft te bouwen. Dit sluit ook goed aan bij wat ik de afgelopen weken heb geleerd: eerst kijken wat native HTML kan, voordat je zelf iets complexers maakt.
+
+Daarnaast heb ik gekeken naar kleinere, maar belangrijke details zoals autocomplete="off", het gebruik van het name-attribuut bij <details> en het verbeteren van contrast in dark mode. Dit soort aanpassingen lijken klein, maar dragen bij aan de algehele gebruikservaring en toegankelijkheid van het formulier. Ik merk dat ik steeds meer oog krijg voor dit soort details.
+
+Het afronden van de BT-opdracht was een belangrijk moment deze week. Ik heb alle openstaande problemen opgelost en het project online gezet via GitHub. Dit gaf een duidelijk eindpunt en zorgde ervoor dat ik mijn werk echt kon afsluiten. Tijdens dit proces kwam ik nog wat problemen tegen, onder andere met localStorage, wat soms niet werkte zoals verwacht. Het oplossen hiervan heeft mij geholpen om beter te begrijpen hoe data-opslag in de browser werkt en waar dingen mis kunnen gaan.
+
+Een technisch punt waar ik opnieuw tegenaan liep, was het werken met input type="date". Ik wilde hier meer controle over hebben, zoals alleen het jaar aanpassen in de value (bijvoorbeeld dd/mm/2026), maar dit bleek niet mogelijk met de standaard functionaliteit. De tip om eventueel een custom input te bouwen met JavaScript liet mij opnieuw zien dat er grenzen zitten aan native HTML. Tegelijkertijd bevestigde dit voor mij dat je goed moet afwegen of zo’n custom oplossing echt nodig is, omdat dit extra complexiteit en mogelijke accessibility-issues met zich meebrengt.
+
+Wat deze week goed ging, is dat ik mijn project daadwerkelijk heb afgerond en veel losse onderdelen heb kunnen samenbrengen tot één geheel. Ik merk dat mijn begrip van formulieren, validatie en gebruikerservaring duidelijk is gegroeid ten opzichte van week 3.
+
+Wat beter kon, is dat ik soms nog moeite heb met het oplossen van JavaScript-problemen, zoals bij localStorage. Ik blijf soms te lang hangen in één oplossing in plaats van sneller hulp te zoeken of het probleem op te splitsen. Ook kan ik nog winnen in het tussentijds testen van mijn werk, zodat problemen eerder zichtbaar worden.
+
+Deze week voelde als een afrondende fase waarin alles samenkwam. Ik heb niet alleen technisch stappen gezet, maar ook geleerd hoe belangrijk het is om details, gebruiksvriendelijkheid en toegankelijkheid mee te nemen in het eindresultaat.
+
+---
 
 
 
