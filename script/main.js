@@ -3,12 +3,14 @@ const akteNee = document.getElementById('aktenee');
 const kinderenNee = document.getElementById('kinderennee');
 const testamentNee = document.getElementById('testamentnee');
 
+// Verwijdert het required attribuut van alle inputs binnen een fieldset
 function removeRequired(fieldsetId) {
     const fieldset = document.getElementById(fieldsetId);
     if (!fieldset) return;
     fieldset.querySelectorAll('input, select, textarea').forEach(field => field.removeAttribute('required'));
 }
 
+// zet het required attribuut alleen voor velden die dat oorspronkelijk hadden
 function restoreRequired(fieldsetId) {
     const fieldset = document.getElementById(fieldsetId);
     if (!fieldset) return;
@@ -17,6 +19,7 @@ function restoreRequired(fieldsetId) {
     });
 }
 
+// Bij het laden opslaan welke vragen required waren
 document.querySelectorAll('input[required], select[required], textarea[required]').forEach(field => {
     field.dataset.wasRequired = "true";
 });
