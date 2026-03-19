@@ -365,3 +365,7 @@ https://stackoverflow.com/questions/23728626/localstorage-and-json-stringify-jso
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse
 
 
+https://regex-generator.olafneumann.org/
+
++ Chatgpt de lijst van steden in noord-holland laten generen
+
